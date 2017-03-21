@@ -1,0 +1,483 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
+<title>Opis datoteke C:/RiRead/RiRead.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="RiRead5.png"/></td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generirao Doxygen 1.8.9.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Traži');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Glavna&#160;stranica</span></a></li>
+      <li><a href="annotated.html"><span>Klase</span></a></li>
+      <li class="current"><a href="files.html"><span>Datoteke</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Traži" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Popis&#160;datoteka</span></a></li>
+      <li><a href="globals.html"><span>članovi&#160;klasa&#160;u&#160;datoteci</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_ri_read_8c.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Definicije</a> &#124;
+<a href="#func-members">Funkcije</a>  </div>
+  <div class="headertitle">
+<div class="title">Opis datoteke RiRead.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Glavni programski kod.  
+<a href="#details">Opširnije...</a></p>
+<div class="textblock"><code>#include &lt;avr/io.h&gt;</code><br />
+<code>#include &lt;avr/eeprom.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;inttypes.h&gt;</code><br />
+<code>#include &lt;util/delay.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;avr/wdt.h&gt;</code><br />
+<code>#include &lt;avr/pgmspace.h&gt;</code><br />
+<code>#include &lt;avr/interrupt.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_ri_read_8h_source.html">RiRead.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_s_s_d1289x16_8h_source.html">SSD1289x16.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_font_8h_source.html">Font.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ft18x34_8h_source.html">ft18x34.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_graphic_8h_source.html">Graphic.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_usart_8h_source.html">Usart.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_string_processing_8h_source.html">StringProcessing.h</a>&quot;</code><br />
+</div>
+<p><a href="_ri_read_8c_source.html">Izvorni kod</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Definicije</h2></td></tr>
+<tr class="memitem:a43bafb28b29491ec7f871319b5a3b2f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43bafb28b29491ec7f871319b5a3b2f8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ri_read_8c.html#a43bafb28b29491ec7f871319b5a3b2f8">F_CPU</a>&#160;&#160;&#160;8000000UL</td></tr>
+<tr class="memdesc:a43bafb28b29491ec7f871319b5a3b2f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definiranje frekvencije oscilatora. <br /></td></tr>
+<tr class="separator:a43bafb28b29491ec7f871319b5a3b2f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funkcije</h2></td></tr>
+<tr class="memitem:a1e3b6d38df0786ccf7f938d60e386aae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ri_read_8c.html#a1e3b6d38df0786ccf7f938d60e386aae">Init</a> ()</td></tr>
+<tr class="memdesc:a1e3b6d38df0786ccf7f938d60e386aae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init funkcija - Inicijalizacija portova i pinova, omogućavanje prekida, odabir fonta, resetiranje LCD-a, postavljanje UBRR vrijednosti za USART.  <a href="#a1e3b6d38df0786ccf7f938d60e386aae">Opširnije...</a><br /></td></tr>
+<tr class="separator:a1e3b6d38df0786ccf7f938d60e386aae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6799935639df0d71bdcb36b1acf1574"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ri_read_8c.html#ae6799935639df0d71bdcb36b1acf1574">PrintLCD</a> (uint16_t left, uint16_t top, uint16_t right, uint16_t bottom, char *Text, uint8_t align, uint16_t color, uint8_t scale)</td></tr>
+<tr class="memdesc:ae6799935639df0d71bdcb36b1acf1574"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcija kojom pojednostavljujemo ispis teksta na LCD.  <a href="#ae6799935639df0d71bdcb36b1acf1574">Opširnije...</a><br /></td></tr>
+<tr class="separator:ae6799935639df0d71bdcb36b1acf1574"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab6364c36e6f7b981aed72a4a1b3be0e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ri_read_8c.html#aab6364c36e6f7b981aed72a4a1b3be0e">ProvjeriTipKartice</a> (int identifikator)</td></tr>
+<tr class="memdesc:aab6364c36e6f7b981aed72a4a1b3be0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcija koja vraća tip kartice.  <a href="#aab6364c36e6f7b981aed72a4a1b3be0e">Opširnije...</a><br /></td></tr>
+<tr class="separator:aab6364c36e6f7b981aed72a4a1b3be0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc1d46441b32dc33c7c39f0949f591dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ri_read_8c.html#acc1d46441b32dc33c7c39f0949f591dc">DohvatiPodatke</a> (char *string, int tipKartice)</td></tr>
+<tr class="memdesc:acc1d46441b32dc33c7c39f0949f591dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcija koja parsa string pročitan s kartice.  <a href="#acc1d46441b32dc33c7c39f0949f591dc">Opširnije...</a><br /></td></tr>
+<tr class="separator:acc1d46441b32dc33c7c39f0949f591dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a812ca4b38edb2b336c9f6f1ebde571dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a812ca4b38edb2b336c9f6f1ebde571dc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ri_read_8c.html#a812ca4b38edb2b336c9f6f1ebde571dc">DeklarirajNaNulu</a> ()</td></tr>
+<tr class="memdesc:a812ca4b38edb2b336c9f6f1ebde571dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcija koja postavlja sve stringove na nulu. <br /></td></tr>
+<tr class="separator:a812ca4b38edb2b336c9f6f1ebde571dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64dc55cba2f7dbda0ca616f06d2dbdf3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a64dc55cba2f7dbda0ca616f06d2dbdf3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ri_read_8c.html#a64dc55cba2f7dbda0ca616f06d2dbdf3">ShowWelcomeScreen</a> ()</td></tr>
+<tr class="memdesc:a64dc55cba2f7dbda0ca616f06d2dbdf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcija koja prikazuje zaslon dobrodošlice, iscrtava logo, ispisuje naziv aplikacije i autora. <br /></td></tr>
+<tr class="separator:a64dc55cba2f7dbda0ca616f06d2dbdf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab143be18bb7bad59818345887b1c4610"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ri_read_8c.html#ab143be18bb7bad59818345887b1c4610">LoginXicom</a> ()</td></tr>
+<tr class="memdesc:ab143be18bb7bad59818345887b1c4610"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcija koja prikazuje zaslon za prijavu.  <a href="#ab143be18bb7bad59818345887b1c4610">Opširnije...</a><br /></td></tr>
+<tr class="separator:ab143be18bb7bad59818345887b1c4610"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab43af84b07639990cc14857c7506ee5f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ri_read_8c.html#ab43af84b07639990cc14857c7506ee5f">ShowLoginScreen</a> (int brojZnakova)</td></tr>
+<tr class="memdesc:ab43af84b07639990cc14857c7506ee5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcija koja provjerava je li provučena X-ica te shodno tome ispisuje status (ERROR || SUCCESS) na Login screenu.  <a href="#ab43af84b07639990cc14857c7506ee5f">Opširnije...</a><br /></td></tr>
+<tr class="separator:ab43af84b07639990cc14857c7506ee5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac102fa78a1a67b62e5eb8ee8a518b7d5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac102fa78a1a67b62e5eb8ee8a518b7d5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ri_read_8c.html#ac102fa78a1a67b62e5eb8ee8a518b7d5">ShowCardScreen</a> ()</td></tr>
+<tr class="memdesc:ac102fa78a1a67b62e5eb8ee8a518b7d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcija koja prikazuje 'Card screen' zaslon nakon uspješne prijave X-icom, ispisuje pozdravnu poruku prijavljenom korisniku, njegovu privilegiju te menu podržanih kartica. <br /></td></tr>
+<tr class="separator:ac102fa78a1a67b62e5eb8ee8a518b7d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d79b0ce78c21d6e5c5bbc6ee5a949df"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ri_read_8c.html#a4d79b0ce78c21d6e5c5bbc6ee5a949df">InfoSwipe</a> ()</td></tr>
+<tr class="memdesc:a4d79b0ce78c21d6e5c5bbc6ee5a949df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcija koja čita jednu od podržanih kartica na ShowCard screenu.  <a href="#a4d79b0ce78c21d6e5c5bbc6ee5a949df">Opširnije...</a><br /></td></tr>
+<tr class="separator:a4d79b0ce78c21d6e5c5bbc6ee5a949df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa85f6d644145ce7b60080e63caec13f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa85f6d644145ce7b60080e63caec13f8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ri_read_8c.html#aa85f6d644145ce7b60080e63caec13f8">ShowInfoScreen</a> ()</td></tr>
+<tr class="memdesc:aa85f6d644145ce7b60080e63caec13f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcija koja prikazuje formatirani ispis sadržaja ovisno o privilegijama i kartici. <br /></td></tr>
+<tr class="separator:aa85f6d644145ce7b60080e63caec13f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a134b98d97d3006e401670b7f73914fd5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ri_read_8c.html#a134b98d97d3006e401670b7f73914fd5">ClearAndShowNewScreen</a> (int screen, int status)</td></tr>
+<tr class="memdesc:a134b98d97d3006e401670b7f73914fd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcija koja očisti ekran te poziva različite screenove.  <a href="#a134b98d97d3006e401670b7f73914fd5">Opširnije...</a><br /></td></tr>
+<tr class="separator:a134b98d97d3006e401670b7f73914fd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c7e94222642ac7ef7fbd78412befe0d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c7e94222642ac7ef7fbd78412befe0d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ri_read_8c.html#a7c7e94222642ac7ef7fbd78412befe0d">forceHardReset</a> ()</td></tr>
+<tr class="memdesc:a7c7e94222642ac7ef7fbd78412befe0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcija za Hard Reset pomoću Watchdog timera. <br /></td></tr>
+<tr class="separator:a7c7e94222642ac7ef7fbd78412befe0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ri_read_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main funkcija - izvođenje programa. <br /></td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afea150fcd685610cb9f7672fce361e53"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afea150fcd685610cb9f7672fce361e53"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ri_read_8c.html#afea150fcd685610cb9f7672fce361e53">ISR</a> (INT0_vect)</td></tr>
+<tr class="memdesc:afea150fcd685610cb9f7672fce361e53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interrupt service routine - prekid INT0 za reset i čišćenje EEPROM-a. <br /></td></tr>
+<tr class="separator:afea150fcd685610cb9f7672fce361e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detaljno objašnjenje</h2>
+<div class="textblock"><p>Glavni programski kod. </p>
+
+<p>Definirano u datoteci <a class="el" href="_ri_read_8c_source.html">RiRead.c</a>.</p>
+</div><h2 class="groupheader">Dokumentacije funkcija</h2>
+<a class="anchor" id="a134b98d97d3006e401670b7f73914fd5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ClearAndShowNewScreen </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>screen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funkcija koja očisti ekran te poziva različite screenove. </p>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">screen</td><td>- screen koji želimo prikazati </td></tr>
+    <tr><td class="paramname">status</td><td>- opcionalna vrijednost za uspješnost </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>error - uspješnost (-1 za neuspjeh, 0 za uspjeh) </dd></dl>
+
+<p>Definirano u liniji <a class="el" href="_ri_read_8c_source.html#l00521">521</a> datoteke <a class="el" href="_ri_read_8c_source.html">RiRead.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acc1d46441b32dc33c7c39f0949f591dc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DohvatiPodatke </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>tipKartice</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funkcija koja parsa string pročitan s kartice. </p>
+<p>Parsani se podaci spremaju u globalnu strukturu. </p><dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>- string pročitan s kartice </td></tr>
+    <tr><td class="paramname">tipKartice</td><td>- broj kartice pomoću kojeg se određuje način parsanja </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definirano u liniji <a class="el" href="_ri_read_8c_source.html#l00108">108</a> datoteke <a class="el" href="_ri_read_8c_source.html">RiRead.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4d79b0ce78c21d6e5c5bbc6ee5a949df"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int InfoSwipe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funkcija koja čita jednu od podržanih kartica na ShowCard screenu. </p>
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>0 - SUCCESS </dd></dl>
+
+<p>Definirano u liniji <a class="el" href="_ri_read_8c_source.html#l00342">342</a> datoteke <a class="el" href="_ri_read_8c_source.html">RiRead.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1e3b6d38df0786ccf7f938d60e386aae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Init funkcija - Inicijalizacija portova i pinova, omogućavanje prekida, odabir fonta, resetiranje LCD-a, postavljanje UBRR vrijednosti za USART. </p>
+<p>Omogućavanje prekida INT0</p>
+<p>JTAG interface onemogućen; kako bi se izbjegao statički eliktricitet na TDO pin</p>
+<p>Inicijalizacija LCD kontrolnih pinova i MCU I/O pinova</p>
+<p>fosc = 8.000MHz, Baud rate 9600bps &ndash;&gt; UBRR = 51 </p>
+
+<p>Definirano u liniji <a class="el" href="_ri_read_8c_source.html#l00033">33</a> datoteke <a class="el" href="_ri_read_8c_source.html">RiRead.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab143be18bb7bad59818345887b1c4610"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LoginXicom </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funkcija koja prikazuje zaslon za prijavu. </p>
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>counter - broj znakova pročitane kartice </dd></dl>
+
+<p>Definirano u liniji <a class="el" href="_ri_read_8c_source.html#l00227">227</a> datoteke <a class="el" href="_ri_read_8c_source.html">RiRead.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae6799935639df0d71bdcb36b1acf1574"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PrintLCD </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>top</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>right</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>bottom</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>Text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>align</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>scale</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funkcija kojom pojednostavljujemo ispis teksta na LCD. </p>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">left</td><td>- lijeva koordinata </td></tr>
+    <tr><td class="paramname">top</td><td>- gornja koordinata </td></tr>
+    <tr><td class="paramname">right</td><td>- desna koordinata </td></tr>
+    <tr><td class="paramname">bottom</td><td>- donja koordinata </td></tr>
+    <tr><td class="paramname">*Text</td><td>- tekst za ispisati </td></tr>
+    <tr><td class="paramname">align</td><td>- željeno poravnanje teksta </td></tr>
+    <tr><td class="paramname">color</td><td>- željena boja teksta </td></tr>
+    <tr><td class="paramname">scale</td><td>- mijenjanje veličine, tj. skaliranje fonta </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definirano u liniji <a class="el" href="_ri_read_8c_source.html#l00070">70</a> datoteke <a class="el" href="_ri_read_8c_source.html">RiRead.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aab6364c36e6f7b981aed72a4a1b3be0e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ProvjeriTipKartice </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>identifikator</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funkcija koja vraća tip kartice. </p>
+<p>Vraća se integer (u <a class="el" href="_ri_read_8h.html" title="Header datoteka glavnog prog. koda - sadrži prototipe funkcija, globalne varijable, konstante, strukturu podataka. ">RiRead.h</a> u enum kartice su definirane vrijednosti). Popis kartica i duljina svake kartice se nalazi u polju popisKartica također definirane u headeru. Vraća se vrijednost 0 ukoliko kartica ne postoji. </p><dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">identifikator</td><td>- broj znakova koje pročitana kartica ima </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>popisKartica - broj kartice </dd></dl>
+
+<p>Definirano u liniji <a class="el" href="_ri_read_8c_source.html#l00085">85</a> datoteke <a class="el" href="_ri_read_8c_source.html">RiRead.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab43af84b07639990cc14857c7506ee5f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ShowLoginScreen </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>brojZnakova</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funkcija koja provjerava je li provučena X-ica te shodno tome ispisuje status (ERROR || SUCCESS) na Login screenu. </p>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">brojZnakova</td><td>- broj znakova pročitane kartice </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>1 SUCCESS </dd>
+<dd>
+-1 ERROR </dd></dl>
+
+<p>Definirano u liniji <a class="el" href="_ri_read_8c_source.html#l00270">270</a> datoteke <a class="el" href="_ri_read_8c_source.html">RiRead.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_f67c3947e5055b089109d77c7a96c6f8.html">RiRead</a></li><li class="navelem"><a class="el" href="_ri_read_8c.html">RiRead.c</a></li>
+    <li class="footer">Napravljeno Čet Svi 7 2015 17:16:12 generator: 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

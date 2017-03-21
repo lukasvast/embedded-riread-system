@@ -1,0 +1,336 @@
+\hypertarget{_ri_read_8h}{}\section{Opis datoteke C\+:/\+Ri\+Read/\+Ri\+Read.h}
+\label{_ri_read_8h}\index{C\+:/\+Ri\+Read/\+Ri\+Read.\+h@{C\+:/\+Ri\+Read/\+Ri\+Read.\+h}}
+
+
+Header datoteka glavnog prog. koda -\/ sadrži prototipe funkcija, globalne varijable, konstante, strukturu podataka.  
+
+
+\subsection*{Strukture}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_korisnik}{Korisnik}
+\begin{DoxyCompactList}\small\item\em Globalna struktura \hyperlink{struct_korisnik}{Korisnik} s pripadajućim članovima. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Definicije}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_ri_read_8h_aab29d58ced0ffcff68bfa9daa4b76f31}{}\#define \hyperlink{_ri_read_8h_aab29d58ced0ffcff68bfa9daa4b76f31}{read\+\_\+eeprom\+\_\+word}(address)~eeprom\+\_\+read\+\_\+word ((const uint16\+\_\+t$\ast$)address)\label{_ri_read_8h_aab29d58ced0ffcff68bfa9daa4b76f31}
+
+\begin{DoxyCompactList}\small\item\em Makroi za lakšu manipulaciju E\+E\+P\+R\+O\+M-\/om. \end{DoxyCompactList}\item 
+\hypertarget{_ri_read_8h_af8cce80eacf4c49c9f92f1e9198df069}{}\#define {\bfseries write\+\_\+eeprom\+\_\+word}(address,  value)~eeprom\+\_\+write\+\_\+word ((uint16\+\_\+t$\ast$)address,(uint16\+\_\+t)value)\label{_ri_read_8h_af8cce80eacf4c49c9f92f1e9198df069}
+
+\end{DoxyCompactItemize}
+\subsection*{Enumeracije}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_ri_read_8h_aa636eec1c3c23c7289fa912686b78988}{}enum \hyperlink{_ri_read_8h_aa636eec1c3c23c7289fa912686b78988}{screens} \{ {\bfseries W\+E\+L\+C\+O\+M\+E} = 1, 
+{\bfseries L\+O\+G\+I\+N} = 2, 
+{\bfseries C\+A\+R\+D} = 3, 
+{\bfseries I\+N\+F\+O} = 4
+ \}\label{_ri_read_8h_aa636eec1c3c23c7289fa912686b78988}
+
+\begin{DoxyCompactList}\small\item\em Ključne riječi za prikazivanje pojedinog screena. \end{DoxyCompactList}\item 
+\hypertarget{_ri_read_8h_a5c8b249ca5156ebbda1c31124a0ab2c0}{}enum \hyperlink{_ri_read_8h_a5c8b249ca5156ebbda1c31124a0ab2c0}{kartice} \{ {\bfseries X\+I\+C\+A} = 1, 
+{\bfseries H\+A\+K} = 2, 
+{\bfseries O\+B\+V\+E\+Z\+N\+O} = 3, 
+{\bfseries D\+O\+P\+U\+N\+S\+K\+O} = 4
+ \}\label{_ri_read_8h_a5c8b249ca5156ebbda1c31124a0ab2c0}
+
+\begin{DoxyCompactList}\small\item\em Kljucne riječi za prepoznavanje podržanih kartica. \end{DoxyCompactList}\item 
+\hypertarget{_ri_read_8h_a5c3d476d552d69c970b24d3601f0d41e}{}enum \hyperlink{_ri_read_8h_a5c3d476d552d69c970b24d3601f0d41e}{prava} \{ {\bfseries A\+D\+M\+I\+N} = 1, 
+{\bfseries M\+O\+D\+E\+R\+A\+T\+O\+R} = 2, 
+{\bfseries G\+U\+E\+S\+T} = 3
+ \}\label{_ri_read_8h_a5c3d476d552d69c970b24d3601f0d41e}
+
+\begin{DoxyCompactList}\small\item\em Ključne riječi za formatiranje zapisa ovisno o privilegiji. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Funkcije}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_ri_read_8h_a812ca4b38edb2b336c9f6f1ebde571dc}{}void \hyperlink{_ri_read_8h_a812ca4b38edb2b336c9f6f1ebde571dc}{Deklariraj\+Na\+Nulu} ()\label{_ri_read_8h_a812ca4b38edb2b336c9f6f1ebde571dc}
+
+\begin{DoxyCompactList}\small\item\em Funkcija koja postavlja sve stringove na nulu. \end{DoxyCompactList}\item 
+void \hyperlink{_ri_read_8h_acc1d46441b32dc33c7c39f0949f591dc}{Dohvati\+Podatke} (char $\ast$string, int tip\+Kartice)
+\begin{DoxyCompactList}\small\item\em Funkcija koja parsa string pročitan s kartice. \end{DoxyCompactList}\item 
+void \hyperlink{_ri_read_8h_ae6799935639df0d71bdcb36b1acf1574}{Print\+L\+C\+D} (uint16\+\_\+t left, uint16\+\_\+t top, uint16\+\_\+t right, uint16\+\_\+t bottom, char $\ast$Text, uint8\+\_\+t align, uint16\+\_\+t color, uint8\+\_\+t scale)
+\begin{DoxyCompactList}\small\item\em Funkcija kojom pojednostavljujemo ispis teksta na L\+C\+D. \end{DoxyCompactList}\item 
+void \hyperlink{_ri_read_8h_a1e3b6d38df0786ccf7f938d60e386aae}{Init} ()
+\begin{DoxyCompactList}\small\item\em Init funkcija -\/ Inicijalizacija portova i pinova, omogućavanje prekida, odabir fonta, resetiranje L\+C\+D-\/a, postavljanje U\+B\+R\+R vrijednosti za U\+S\+A\+R\+T. \end{DoxyCompactList}\item 
+\hypertarget{_ri_read_8h_a64dc55cba2f7dbda0ca616f06d2dbdf3}{}void \hyperlink{_ri_read_8h_a64dc55cba2f7dbda0ca616f06d2dbdf3}{Show\+Welcome\+Screen} ()\label{_ri_read_8h_a64dc55cba2f7dbda0ca616f06d2dbdf3}
+
+\begin{DoxyCompactList}\small\item\em Funkcija koja prikazuje zaslon dobrodošlice, iscrtava logo, ispisuje naziv aplikacije i autora. \end{DoxyCompactList}\item 
+\hypertarget{_ri_read_8h_ac102fa78a1a67b62e5eb8ee8a518b7d5}{}void \hyperlink{_ri_read_8h_ac102fa78a1a67b62e5eb8ee8a518b7d5}{Show\+Card\+Screen} ()\label{_ri_read_8h_ac102fa78a1a67b62e5eb8ee8a518b7d5}
+
+\begin{DoxyCompactList}\small\item\em Funkcija koja prikazuje \textquotesingle{}Card screen\textquotesingle{} zaslon nakon uspješne prijave X-\/icom, ispisuje pozdravnu poruku prijavljenom korisniku, njegovu privilegiju te menu podržanih kartica. \end{DoxyCompactList}\item 
+\hypertarget{_ri_read_8h_aa85f6d644145ce7b60080e63caec13f8}{}void \hyperlink{_ri_read_8h_aa85f6d644145ce7b60080e63caec13f8}{Show\+Info\+Screen} ()\label{_ri_read_8h_aa85f6d644145ce7b60080e63caec13f8}
+
+\begin{DoxyCompactList}\small\item\em Funkcija koja prikazuje formatirani ispis sadržaja ovisno o privilegijama i kartici. \end{DoxyCompactList}\item 
+int \hyperlink{_ri_read_8h_a4d79b0ce78c21d6e5c5bbc6ee5a949df}{Info\+Swipe} ()
+\begin{DoxyCompactList}\small\item\em Funkcija koja čita jednu od podržanih kartica na Show\+Card screenu. \end{DoxyCompactList}\item 
+int \hyperlink{_ri_read_8h_aab6364c36e6f7b981aed72a4a1b3be0e}{Provjeri\+Tip\+Kartice} (int identifikator)
+\begin{DoxyCompactList}\small\item\em Funkcija koja vraća tip kartice. \end{DoxyCompactList}\item 
+int \hyperlink{_ri_read_8h_ab143be18bb7bad59818345887b1c4610}{Login\+Xicom} ()
+\begin{DoxyCompactList}\small\item\em Funkcija koja prikazuje zaslon za prijavu. \end{DoxyCompactList}\item 
+int \hyperlink{_ri_read_8h_ab43af84b07639990cc14857c7506ee5f}{Show\+Login\+Screen} (int broj\+Znakova)
+\begin{DoxyCompactList}\small\item\em Funkcija koja provjerava je li provučena X-\/ica te shodno tome ispisuje status (E\+R\+R\+O\+R $\vert$$\vert$ S\+U\+C\+C\+E\+S\+S) na Login screenu. \end{DoxyCompactList}\item 
+int \hyperlink{_ri_read_8h_a134b98d97d3006e401670b7f73914fd5}{Clear\+And\+Show\+New\+Screen} (int screen, int status)
+\begin{DoxyCompactList}\small\item\em Funkcija koja očisti ekran te poziva različite screenove. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Varijable}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_ri_read_8h_a518517eb5c5990e68f3dadc84f1b6971}{}unsigned int E\+E\+M\+E\+M \hyperlink{_ri_read_8h_a518517eb5c5990e68f3dadc84f1b6971}{my\+\_\+eeprom\+\_\+word}\label{_ri_read_8h_a518517eb5c5990e68f3dadc84f1b6971}
+
+\begin{DoxyCompactList}\small\item\em Deklariranje E\+E\+P\+R\+O\+M varijable. \end{DoxyCompactList}\item 
+const int \hyperlink{_ri_read_8h_a4124ea8324896b7b23646261eff1ec4e}{popis\+Kartica} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Popis podržanih kartica i njihov ukupan broj znakova koje sadrže. \end{DoxyCompactList}\item 
+\hypertarget{_ri_read_8h_abae97cdd53f17abd2f7936ed3b521471}{}const char \hyperlink{_ri_read_8h_abae97cdd53f17abd2f7936ed3b521471}{admin} \mbox{[}$\,$\mbox{]} = \char`\"{}0069049950\char`\"{}\label{_ri_read_8h_abae97cdd53f17abd2f7936ed3b521471}
+
+\begin{DoxyCompactList}\small\item\em Konstanta kojom privilegiju \textquotesingle{}A\+D\+M\+I\+N\textquotesingle{} dodjeljujemo određenom J\+M\+B\+A\+G-\/u. \end{DoxyCompactList}\item 
+\hypertarget{_ri_read_8h_af9df1e477be6fe21cd04c145f26fc360}{}const char \hyperlink{_ri_read_8h_af9df1e477be6fe21cd04c145f26fc360}{moderator} \mbox{[}$\,$\mbox{]} = \char`\"{}0069059387\char`\"{}\label{_ri_read_8h_af9df1e477be6fe21cd04c145f26fc360}
+
+\begin{DoxyCompactList}\small\item\em Konstanta kojom privilegiju \textquotesingle{}M\+O\+D\+E\+R\+A\+T\+O\+R\textquotesingle{} dodjeljujemo određenom J\+M\+B\+A\+G-\/u. \end{DoxyCompactList}\item 
+\hypertarget{_ri_read_8h_adf2c1f24ee3da455b622572497915ecc}{}char \hyperlink{_ri_read_8h_adf2c1f24ee3da455b622572497915ecc}{str} \mbox{[}200\mbox{]}\label{_ri_read_8h_adf2c1f24ee3da455b622572497915ecc}
+
+\begin{DoxyCompactList}\small\item\em buffer \end{DoxyCompactList}\item 
+\hypertarget{_ri_read_8h_a1babb7cf0386c97a56fa85c6f531c558}{}struct \hyperlink{struct_korisnik}{Korisnik} \hyperlink{_ri_read_8h_a1babb7cf0386c97a56fa85c6f531c558}{korisnik}\label{_ri_read_8h_a1babb7cf0386c97a56fa85c6f531c558}
+
+\begin{DoxyCompactList}\small\item\em struktura \end{DoxyCompactList}\item 
+\hypertarget{_ri_read_8h_ab6408bc9cbf455dfb0763b78f29163a6}{}int \hyperlink{_ri_read_8h_ab6408bc9cbf455dfb0763b78f29163a6}{privilegije}\label{_ri_read_8h_ab6408bc9cbf455dfb0763b78f29163a6}
+
+\begin{DoxyCompactList}\small\item\em A\+D\+M\+I\+N, M\+O\+D\+E\+R\+A\+T\+O\+R, G\+U\+E\+S\+T. \end{DoxyCompactList}\item 
+\hypertarget{_ri_read_8h_a1e1719d89e4996a6cd8c4b65fe755048}{}int \hyperlink{_ri_read_8h_a1e1719d89e4996a6cd8c4b65fe755048}{broj\+Kartice}\label{_ri_read_8h_a1e1719d89e4996a6cd8c4b65fe755048}
+
+\begin{DoxyCompactList}\small\item\em sprema vrijednost ukupnog broja znakova kartice \end{DoxyCompactList}\item 
+\hypertarget{_ri_read_8h_ae56e52d9b49c8921afe9dffa44367743}{}int \hyperlink{_ri_read_8h_ae56e52d9b49c8921afe9dffa44367743}{broj\+Chara}\label{_ri_read_8h_ae56e52d9b49c8921afe9dffa44367743}
+
+\begin{DoxyCompactList}\small\item\em broj charactera kartice -\/ način po kojem prepoznajemo vrstu kartice (X-\/ica, H\+A\+K, H\+Z\+Z\+O Obv., H\+Z\+Z\+O Dop.) \end{DoxyCompactList}\item 
+\hypertarget{_ri_read_8h_afc2aeadbd8dce37d6480ea11bd4bdc04}{}int \hyperlink{_ri_read_8h_afc2aeadbd8dce37d6480ea11bd4bdc04}{R\+E\+S\+E\+T\+I\+R\+A\+N} =0\label{_ri_read_8h_afc2aeadbd8dce37d6480ea11bd4bdc04}
+
+\begin{DoxyCompactList}\small\item\em kontrolna varijabla koju koristimo u I\+S\+R i main funkciji -\/ određuje hoće li se prikazati \textquotesingle{}Welcome screen\textquotesingle{} \end{DoxyCompactList}\item 
+\hypertarget{_ri_read_8h_a4445be6ca58d035ef5ed196dd1b51bbd}{}const int \hyperlink{_ri_read_8h_a4445be6ca58d035ef5ed196dd1b51bbd}{size\+Of\+Popis\+Kartica} = sizeof(\hyperlink{_ri_read_8h_a4124ea8324896b7b23646261eff1ec4e}{popis\+Kartica})/sizeof(\hyperlink{_ri_read_8h_a4124ea8324896b7b23646261eff1ec4e}{popis\+Kartica}\mbox{[}0\mbox{]})\label{_ri_read_8h_a4445be6ca58d035ef5ed196dd1b51bbd}
+
+\begin{DoxyCompactList}\small\item\em Konstanta u koju se sprema veličina polja \textquotesingle{}popis\+Kartica\textquotesingle{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detaljno objašnjenje}
+Header datoteka glavnog prog. koda -\/ sadrži prototipe funkcija, globalne varijable, konstante, strukturu podataka. 
+
+
+
+\subsection{Dokumentacije funkcija}
+\hypertarget{_ri_read_8h_a134b98d97d3006e401670b7f73914fd5}{}\index{Ri\+Read.\+h@{Ri\+Read.\+h}!Clear\+And\+Show\+New\+Screen@{Clear\+And\+Show\+New\+Screen}}
+\index{Clear\+And\+Show\+New\+Screen@{Clear\+And\+Show\+New\+Screen}!Ri\+Read.\+h@{Ri\+Read.\+h}}
+\subsubsection[{Clear\+And\+Show\+New\+Screen}]{\setlength{\rightskip}{0pt plus 5cm}int Clear\+And\+Show\+New\+Screen (
+\begin{DoxyParamCaption}
+\item[{int}]{screen, }
+\item[{int}]{status}
+\end{DoxyParamCaption}
+)}\label{_ri_read_8h_a134b98d97d3006e401670b7f73914fd5}
+
+
+Funkcija koja očisti ekran te poziva različite screenove. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em screen} & -\/ screen koji želimo prikazati \\
+\hline
+{\em status} & -\/ opcionalna vrijednost za uspješnost \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Povratne vrijednosti}
+error -\/ uspješnost (-\/1 za neuspjeh, 0 za uspjeh) 
+\end{DoxyReturn}
+
+
+Definirano u liniji 521 datoteke Ri\+Read.\+c.
+
+\hypertarget{_ri_read_8h_acc1d46441b32dc33c7c39f0949f591dc}{}\index{Ri\+Read.\+h@{Ri\+Read.\+h}!Dohvati\+Podatke@{Dohvati\+Podatke}}
+\index{Dohvati\+Podatke@{Dohvati\+Podatke}!Ri\+Read.\+h@{Ri\+Read.\+h}}
+\subsubsection[{Dohvati\+Podatke}]{\setlength{\rightskip}{0pt plus 5cm}void Dohvati\+Podatke (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{string, }
+\item[{int}]{tip\+Kartice}
+\end{DoxyParamCaption}
+)}\label{_ri_read_8h_acc1d46441b32dc33c7c39f0949f591dc}
+
+
+Funkcija koja parsa string pročitan s kartice. 
+
+Parsani se podaci spremaju u globalnu strukturu. 
+\begin{DoxyParams}{Parametri}
+{\em string} & -\/ string pročitan s kartice \\
+\hline
+{\em tip\+Kartice} & -\/ broj kartice pomoću kojeg se određuje način parsanja \\
+\hline
+\end{DoxyParams}
+
+
+Definirano u liniji 108 datoteke Ri\+Read.\+c.
+
+\hypertarget{_ri_read_8h_a4d79b0ce78c21d6e5c5bbc6ee5a949df}{}\index{Ri\+Read.\+h@{Ri\+Read.\+h}!Info\+Swipe@{Info\+Swipe}}
+\index{Info\+Swipe@{Info\+Swipe}!Ri\+Read.\+h@{Ri\+Read.\+h}}
+\subsubsection[{Info\+Swipe}]{\setlength{\rightskip}{0pt plus 5cm}int Info\+Swipe (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_ri_read_8h_a4d79b0ce78c21d6e5c5bbc6ee5a949df}
+
+
+Funkcija koja čita jednu od podržanih kartica na Show\+Card screenu. 
+
+\begin{DoxyReturn}{Povratne vrijednosti}
+0 -\/ S\+U\+C\+C\+E\+S\+S 
+\end{DoxyReturn}
+
+
+Definirano u liniji 342 datoteke Ri\+Read.\+c.
+
+\hypertarget{_ri_read_8h_a1e3b6d38df0786ccf7f938d60e386aae}{}\index{Ri\+Read.\+h@{Ri\+Read.\+h}!Init@{Init}}
+\index{Init@{Init}!Ri\+Read.\+h@{Ri\+Read.\+h}}
+\subsubsection[{Init}]{\setlength{\rightskip}{0pt plus 5cm}void Init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_ri_read_8h_a1e3b6d38df0786ccf7f938d60e386aae}
+
+
+Init funkcija -\/ Inicijalizacija portova i pinova, omogućavanje prekida, odabir fonta, resetiranje L\+C\+D-\/a, postavljanje U\+B\+R\+R vrijednosti za U\+S\+A\+R\+T. 
+
+Omogućavanje prekida I\+N\+T0
+
+J\+T\+A\+G interface onemogućen; kako bi se izbjegao statički eliktricitet na T\+D\+O pin
+
+Inicijalizacija L\+C\+D kontrolnih pinova i M\+C\+U I/\+O pinova
+
+fosc = 8.\+000\+M\+Hz, Baud rate 9600bps --$>$ U\+B\+R\+R = 51 
+
+Definirano u liniji 33 datoteke Ri\+Read.\+c.
+
+\hypertarget{_ri_read_8h_ab143be18bb7bad59818345887b1c4610}{}\index{Ri\+Read.\+h@{Ri\+Read.\+h}!Login\+Xicom@{Login\+Xicom}}
+\index{Login\+Xicom@{Login\+Xicom}!Ri\+Read.\+h@{Ri\+Read.\+h}}
+\subsubsection[{Login\+Xicom}]{\setlength{\rightskip}{0pt plus 5cm}int Login\+Xicom (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_ri_read_8h_ab143be18bb7bad59818345887b1c4610}
+
+
+Funkcija koja prikazuje zaslon za prijavu. 
+
+\begin{DoxyReturn}{Povratne vrijednosti}
+counter -\/ broj znakova pročitane kartice 
+\end{DoxyReturn}
+
+
+Definirano u liniji 227 datoteke Ri\+Read.\+c.
+
+\hypertarget{_ri_read_8h_ae6799935639df0d71bdcb36b1acf1574}{}\index{Ri\+Read.\+h@{Ri\+Read.\+h}!Print\+L\+C\+D@{Print\+L\+C\+D}}
+\index{Print\+L\+C\+D@{Print\+L\+C\+D}!Ri\+Read.\+h@{Ri\+Read.\+h}}
+\subsubsection[{Print\+L\+C\+D}]{\setlength{\rightskip}{0pt plus 5cm}void Print\+L\+C\+D (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{left, }
+\item[{uint16\+\_\+t}]{top, }
+\item[{uint16\+\_\+t}]{right, }
+\item[{uint16\+\_\+t}]{bottom, }
+\item[{char $\ast$}]{Text, }
+\item[{uint8\+\_\+t}]{align, }
+\item[{uint16\+\_\+t}]{color, }
+\item[{uint8\+\_\+t}]{scale}
+\end{DoxyParamCaption}
+)}\label{_ri_read_8h_ae6799935639df0d71bdcb36b1acf1574}
+
+
+Funkcija kojom pojednostavljujemo ispis teksta na L\+C\+D. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em left} & -\/ lijeva koordinata \\
+\hline
+{\em top} & -\/ gornja koordinata \\
+\hline
+{\em right} & -\/ desna koordinata \\
+\hline
+{\em bottom} & -\/ donja koordinata \\
+\hline
+{\em $\ast$\+Text} & -\/ tekst za ispisati \\
+\hline
+{\em align} & -\/ željeno poravnanje teksta \\
+\hline
+{\em color} & -\/ željena boja teksta \\
+\hline
+{\em scale} & -\/ mijenjanje veličine, tj. skaliranje fonta \\
+\hline
+\end{DoxyParams}
+
+
+Definirano u liniji 70 datoteke Ri\+Read.\+c.
+
+\hypertarget{_ri_read_8h_aab6364c36e6f7b981aed72a4a1b3be0e}{}\index{Ri\+Read.\+h@{Ri\+Read.\+h}!Provjeri\+Tip\+Kartice@{Provjeri\+Tip\+Kartice}}
+\index{Provjeri\+Tip\+Kartice@{Provjeri\+Tip\+Kartice}!Ri\+Read.\+h@{Ri\+Read.\+h}}
+\subsubsection[{Provjeri\+Tip\+Kartice}]{\setlength{\rightskip}{0pt plus 5cm}int Provjeri\+Tip\+Kartice (
+\begin{DoxyParamCaption}
+\item[{int}]{identifikator}
+\end{DoxyParamCaption}
+)}\label{_ri_read_8h_aab6364c36e6f7b981aed72a4a1b3be0e}
+
+
+Funkcija koja vraća tip kartice. 
+
+Vraća se integer (u \hyperlink{_ri_read_8h}{Ri\+Read.\+h} u enum kartice su definirane vrijednosti). Popis kartica i duljina svake kartice se nalazi u polju popis\+Kartica također definirane u headeru. Vraća se vrijednost 0 ukoliko kartica ne postoji. 
+\begin{DoxyParams}{Parametri}
+{\em identifikator} & -\/ broj znakova koje pročitana kartica ima \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Povratne vrijednosti}
+popis\+Kartica -\/ broj kartice 
+\end{DoxyReturn}
+
+
+Definirano u liniji 85 datoteke Ri\+Read.\+c.
+
+\hypertarget{_ri_read_8h_ab43af84b07639990cc14857c7506ee5f}{}\index{Ri\+Read.\+h@{Ri\+Read.\+h}!Show\+Login\+Screen@{Show\+Login\+Screen}}
+\index{Show\+Login\+Screen@{Show\+Login\+Screen}!Ri\+Read.\+h@{Ri\+Read.\+h}}
+\subsubsection[{Show\+Login\+Screen}]{\setlength{\rightskip}{0pt plus 5cm}int Show\+Login\+Screen (
+\begin{DoxyParamCaption}
+\item[{int}]{broj\+Znakova}
+\end{DoxyParamCaption}
+)}\label{_ri_read_8h_ab43af84b07639990cc14857c7506ee5f}
+
+
+Funkcija koja provjerava je li provučena X-\/ica te shodno tome ispisuje status (E\+R\+R\+O\+R $\vert$$\vert$ S\+U\+C\+C\+E\+S\+S) na Login screenu. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em broj\+Znakova} & -\/ broj znakova pročitane kartice \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Povratne vrijednosti}
+1 S\+U\+C\+C\+E\+S\+S 
+
+-\/1 E\+R\+R\+O\+R 
+\end{DoxyReturn}
+
+
+Definirano u liniji 270 datoteke Ri\+Read.\+c.
+
+
+
+\subsection{Dokumentacija varijable}
+\hypertarget{_ri_read_8h_a4124ea8324896b7b23646261eff1ec4e}{}\index{Ri\+Read.\+h@{Ri\+Read.\+h}!popis\+Kartica@{popis\+Kartica}}
+\index{popis\+Kartica@{popis\+Kartica}!Ri\+Read.\+h@{Ri\+Read.\+h}}
+\subsubsection[{popis\+Kartica}]{\setlength{\rightskip}{0pt plus 5cm}const int popis\+Kartica\mbox{[}$\,$\mbox{]}}\label{_ri_read_8h_a4124ea8324896b7b23646261eff1ec4e}
+{\bfseries Početna vrijednost\+:}
+\begin{DoxyCode}
+= \{
+    XICA, 85,
+    HAK, 101,
+    OBVEZNO, 139,
+    DOPUNSKO, 133
+\}
+\end{DoxyCode}
+
+
+Popis podržanih kartica i njihov ukupan broj znakova koje sadrže. 
+
+
+
+Definirano u liniji 43 datoteke Ri\+Read.\+h.
+

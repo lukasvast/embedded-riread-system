@@ -1,0 +1,108 @@
+\hypertarget{_string_processing_8c}{}\section{Opis datoteke C\+:/\+Ri\+Read/\+String\+Processing.c}
+\label{_string_processing_8c}\index{C\+:/\+Ri\+Read/\+String\+Processing.\+c@{C\+:/\+Ri\+Read/\+String\+Processing.\+c}}
+
+
+Knjižnica funkcija za procesiranje stringova zapisanih na karticama.  
+
+
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+\subsection*{Funkcije}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{_string_processing_8c_a121e76c9fb1f85ab2bbce5d998963a4f}{Vrati\+Od\+Nte\+Pojave\+Delimitera\+Do\+Delimitera} (char $\ast$string, char $\ast$left\+Delim, int pos, char $\ast$right\+Delim)
+\begin{DoxyCompactList}\small\item\em Funkcija koja vraća string u rasponu između pojave navedenih delimitera. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{_string_processing_8c_af3d684eae8379e50adc0c9bd7b8fbd55}{Vrati\+Od\+Pozicije\+Do\+Pozicije} (char $\ast$string, int left\+Position, int right\+Position)
+\begin{DoxyCompactList}\small\item\em Funkcija koja vraća string u rasponu između navedenih pozicija. \end{DoxyCompactList}\item 
+void \hyperlink{_string_processing_8c_a772a0e3b3e075042525b109a5837814c}{Formatiraj\+Dijakriticke\+Na\+Zdravstvenoj} (char $\ast$haystack)
+\begin{DoxyCompactList}\small\item\em Funkcija koja nepoznate simbole formatira u pripadajuća slova. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detaljno objašnjenje}
+Knjižnica funkcija za procesiranje stringova zapisanih na karticama. 
+
+
+
+\subsection{Dokumentacije funkcija}
+\hypertarget{_string_processing_8c_a772a0e3b3e075042525b109a5837814c}{}\index{String\+Processing.\+c@{String\+Processing.\+c}!Formatiraj\+Dijakriticke\+Na\+Zdravstvenoj@{Formatiraj\+Dijakriticke\+Na\+Zdravstvenoj}}
+\index{Formatiraj\+Dijakriticke\+Na\+Zdravstvenoj@{Formatiraj\+Dijakriticke\+Na\+Zdravstvenoj}!String\+Processing.\+c@{String\+Processing.\+c}}
+\subsubsection[{Formatiraj\+Dijakriticke\+Na\+Zdravstvenoj}]{\setlength{\rightskip}{0pt plus 5cm}void Formatiraj\+Dijakriticke\+Na\+Zdravstvenoj (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{haystack}
+\end{DoxyParamCaption}
+)}\label{_string_processing_8c_a772a0e3b3e075042525b109a5837814c}
+
+
+Funkcija koja nepoznate simbole formatira u pripadajuća slova. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em haystack} & -\/ string koji se želi formatirati \\
+\hline
+\end{DoxyParams}
+
+
+Definirano u liniji 81 datoteke String\+Processing.\+c.
+
+\hypertarget{_string_processing_8c_a121e76c9fb1f85ab2bbce5d998963a4f}{}\index{String\+Processing.\+c@{String\+Processing.\+c}!Vrati\+Od\+Nte\+Pojave\+Delimitera\+Do\+Delimitera@{Vrati\+Od\+Nte\+Pojave\+Delimitera\+Do\+Delimitera}}
+\index{Vrati\+Od\+Nte\+Pojave\+Delimitera\+Do\+Delimitera@{Vrati\+Od\+Nte\+Pojave\+Delimitera\+Do\+Delimitera}!String\+Processing.\+c@{String\+Processing.\+c}}
+\subsubsection[{Vrati\+Od\+Nte\+Pojave\+Delimitera\+Do\+Delimitera}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Vrati\+Od\+Nte\+Pojave\+Delimitera\+Do\+Delimitera (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{string, }
+\item[{char $\ast$}]{left\+Delim, }
+\item[{int}]{pos, }
+\item[{char $\ast$}]{right\+Delim}
+\end{DoxyParamCaption}
+)}\label{_string_processing_8c_a121e76c9fb1f85ab2bbce5d998963a4f}
+
+
+Funkcija koja vraća string u rasponu između pojave navedenih delimitera. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em string} & -\/ haystack iz kojeg želimo izvući needle \\
+\hline
+{\em left\+Delim} & -\/ lijevi delimiter \\
+\hline
+{\em pos} & -\/ koje je po redu pojavljivanje lijevog delimitera u haystacku \\
+\hline
+{\em delimiter} & -\/ desni delimiter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Povratne vrijednosti}
+haystack -\/ vraćanje stringa u danom rasponu 
+\end{DoxyReturn}
+
+
+Definirano u liniji 17 datoteke String\+Processing.\+c.
+
+\hypertarget{_string_processing_8c_af3d684eae8379e50adc0c9bd7b8fbd55}{}\index{String\+Processing.\+c@{String\+Processing.\+c}!Vrati\+Od\+Pozicije\+Do\+Pozicije@{Vrati\+Od\+Pozicije\+Do\+Pozicije}}
+\index{Vrati\+Od\+Pozicije\+Do\+Pozicije@{Vrati\+Od\+Pozicije\+Do\+Pozicije}!String\+Processing.\+c@{String\+Processing.\+c}}
+\subsubsection[{Vrati\+Od\+Pozicije\+Do\+Pozicije}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Vrati\+Od\+Pozicije\+Do\+Pozicije (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{string, }
+\item[{int}]{left\+Position, }
+\item[{int}]{right\+Position}
+\end{DoxyParamCaption}
+)}\label{_string_processing_8c_af3d684eae8379e50adc0c9bd7b8fbd55}
+
+
+Funkcija koja vraća string u rasponu između navedenih pozicija. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em string} & -\/ haystack iz kojeg želimo izvući needle \\
+\hline
+{\em lef\+Position} & -\/ lijeva pozicija \\
+\hline
+{\em right\+Position} & -\/ desna pozicija \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Povratne vrijednosti}
+left\+Delim -\/ vraćanje stringa u danom rasponu 
+\end{DoxyReturn}
+
+
+Definirano u liniji 48 datoteke String\+Processing.\+c.
+

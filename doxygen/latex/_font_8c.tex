@@ -1,0 +1,89 @@
+\hypertarget{_font_8c}{}\section{Opis datoteke C\+:/\+Ri\+Read/\+Font.c}
+\label{_font_8c}\index{C\+:/\+Ri\+Read/\+Font.\+c@{C\+:/\+Ri\+Read/\+Font.\+c}}
+
+
+Knjižnice funkcija za ispis teksta na L\+C\+D.  
+
+
+{\ttfamily \#include $<$avr/io.\+h$>$}\\*
+{\ttfamily \#include $<$avr/pgmspace.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Graphic.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Font.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+S\+D1289x16.\+h\char`\"{}}\\*
+\subsection*{Definicije}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_font_8c_abade1e968984b1990ce2051d58bcab76}{}\#define \hyperlink{_font_8c_abade1e968984b1990ce2051d58bcab76}{F\+O\+N\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+I\+Z\+E}~7\label{_font_8c_abade1e968984b1990ce2051d58bcab76}
+
+\begin{DoxyCompactList}\small\item\em Header size of fonts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Funkcije}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_font_8c_aa80237c6f19aaeca9b1c1c0c9781fbfa}{}void {\bfseries Lcd\+Font} (uint8\+\_\+t $\ast$pointer)\label{_font_8c_aa80237c6f19aaeca9b1c1c0c9781fbfa}
+
+\item 
+\hypertarget{_font_8c_a1f5b876abbece0053552255fab6c023d}{}uint8\+\_\+t {\bfseries Draw\+Char} (unsigned char c)\label{_font_8c_a1f5b876abbece0053552255fab6c023d}
+
+\item 
+\hypertarget{_font_8c_abfcc1ee7d5c12775f4e4fde03158a62b}{}unsigned int {\bfseries Calc\+Text\+Width} (char $\ast$Text)\label{_font_8c_abfcc1ee7d5c12775f4e4fde03158a62b}
+
+\item 
+\hypertarget{_font_8c_a15309fa52fbdc936dabe70a3858818bb}{}unsigned int {\bfseries Calc\+Text\+Height} (char $\ast$Text)\label{_font_8c_a15309fa52fbdc936dabe70a3858818bb}
+
+\item 
+\hypertarget{_font_8c_a520c4232ee4bdad9f8d9b52b1b0082ce}{}unsigned int {\bfseries Draw\+Str} (char $\ast$Text)\label{_font_8c_a520c4232ee4bdad9f8d9b52b1b0082ce}
+
+\item 
+\hypertarget{_font_8c_a81c1f29eb5be83b4d7acc27eff070d45}{}void {\bfseries Draw\+Text} (uint16\+\_\+t left, uint16\+\_\+t top, uint16\+\_\+t right, uint16\+\_\+t bottom, char $\ast$Text, uint8\+\_\+t aline)\label{_font_8c_a81c1f29eb5be83b4d7acc27eff070d45}
+
+\end{DoxyCompactItemize}
+\subsection*{Varijable}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_font_8c_a8ff9250bf78116c3f7b6789aae27b94e}{}uint8\+\_\+t $\ast$ \hyperlink{_font_8c_a8ff9250bf78116c3f7b6789aae27b94e}{Font\+Pointer}\label{_font_8c_a8ff9250bf78116c3f7b6789aae27b94e}
+
+\begin{DoxyCompactList}\small\item\em Font Pointer. \end{DoxyCompactList}\item 
+\hypertarget{_font_8c_ad60cbe58e4e297fd42c0891c4fc2d290}{}uint8\+\_\+t \hyperlink{_font_8c_ad60cbe58e4e297fd42c0891c4fc2d290}{rot} = 0\label{_font_8c_ad60cbe58e4e297fd42c0891c4fc2d290}
+
+\begin{DoxyCompactList}\small\item\em Rot 0=0 degrees, 1=90 degrees. \end{DoxyCompactList}\item 
+\hypertarget{_font_8c_a195f0db2fa98af670b120f35349b2086}{}uint16\+\_\+t \hyperlink{_font_8c_a195f0db2fa98af670b120f35349b2086}{Fg\+Color} = W\+H\+I\+T\+E\label{_font_8c_a195f0db2fa98af670b120f35349b2086}
+
+\begin{DoxyCompactList}\small\item\em Text F\+G color, 5-\/6-\/5 R\+G\+B. \end{DoxyCompactList}\item 
+\hypertarget{_font_8c_a1d6424906df5072a8b98f6f9d816d075}{}uint16\+\_\+t \hyperlink{_font_8c_a1d6424906df5072a8b98f6f9d816d075}{Bk\+Color} = W\+H\+I\+T\+E\label{_font_8c_a1d6424906df5072a8b98f6f9d816d075}
+
+\begin{DoxyCompactList}\small\item\em Text B\+K color, 5-\/6-\/5 R\+G\+B. \end{DoxyCompactList}\item 
+\hypertarget{_font_8c_a6dd56539d1ca92245b880fb10f414887}{}uint8\+\_\+t \hyperlink{_font_8c_a6dd56539d1ca92245b880fb10f414887}{Font\+Fixed} = 0\label{_font_8c_a6dd56539d1ca92245b880fb10f414887}
+
+\begin{DoxyCompactList}\small\item\em Text type 0=Proportional , 1=Fixed. \end{DoxyCompactList}\item 
+\hypertarget{_font_8c_abc7c4d8e80ef62cd26b71c61eba5782b}{}uint8\+\_\+t \hyperlink{_font_8c_abc7c4d8e80ef62cd26b71c61eba5782b}{Non\+Transparence} = 0\label{_font_8c_abc7c4d8e80ef62cd26b71c61eba5782b}
+
+\begin{DoxyCompactList}\small\item\em Transparent 0=No, 1=Yes. \end{DoxyCompactList}\item 
+\hypertarget{_font_8c_a021249d2eb1fb7335050c2e883335f5b}{}uint8\+\_\+t \hyperlink{_font_8c_a021249d2eb1fb7335050c2e883335f5b}{Font\+Width}\label{_font_8c_a021249d2eb1fb7335050c2e883335f5b}
+
+\begin{DoxyCompactList}\small\item\em M\+A\+X width of font. \end{DoxyCompactList}\item 
+\hypertarget{_font_8c_a62f376116f9d475e50cf9f8c73b7d5c4}{}uint8\+\_\+t \hyperlink{_font_8c_a62f376116f9d475e50cf9f8c73b7d5c4}{Font\+Height}\label{_font_8c_a62f376116f9d475e50cf9f8c73b7d5c4}
+
+\begin{DoxyCompactList}\small\item\em M\+A\+X height of font. \end{DoxyCompactList}\item 
+\hypertarget{_font_8c_a191ad500e2c744ff7f535fa7e5edc8ff}{}uint8\+\_\+t \hyperlink{_font_8c_a191ad500e2c744ff7f535fa7e5edc8ff}{Font\+X\+Scale} = 1\label{_font_8c_a191ad500e2c744ff7f535fa7e5edc8ff}
+
+\begin{DoxyCompactList}\small\item\em X size of font. \end{DoxyCompactList}\item 
+\hypertarget{_font_8c_a014c9d60e5be295c9a3aef6253eed2a0}{}uint8\+\_\+t \hyperlink{_font_8c_a014c9d60e5be295c9a3aef6253eed2a0}{Font\+Y\+Scale} = 1\label{_font_8c_a014c9d60e5be295c9a3aef6253eed2a0}
+
+\begin{DoxyCompactList}\small\item\em Y size of font. \end{DoxyCompactList}\item 
+\hypertarget{_font_8c_af2cbfe329b4ba66cd2686939b21cb0df}{}uint8\+\_\+t \hyperlink{_font_8c_af2cbfe329b4ba66cd2686939b21cb0df}{Font\+Space} = 1\label{_font_8c_af2cbfe329b4ba66cd2686939b21cb0df}
+
+\begin{DoxyCompactList}\small\item\em Space between char. \end{DoxyCompactList}\item 
+\hypertarget{_font_8c_a31b3e0f195ebe68aeeaab5a2805b362a}{}unsigned int \hyperlink{_font_8c_a31b3e0f195ebe68aeeaab5a2805b362a}{cursor\+X} = 0\label{_font_8c_a31b3e0f195ebe68aeeaab5a2805b362a}
+
+\begin{DoxyCompactList}\small\item\em X position. \end{DoxyCompactList}\item 
+\hypertarget{_font_8c_afeb0001391a3ce8a4043f3a6dfc4fb5e}{}unsigned int \hyperlink{_font_8c_afeb0001391a3ce8a4043f3a6dfc4fb5e}{cursor\+Y} = 0\label{_font_8c_afeb0001391a3ce8a4043f3a6dfc4fb5e}
+
+\begin{DoxyCompactList}\small\item\em Y position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detaljno objašnjenje}
+Knjižnice funkcija za ispis teksta na L\+C\+D. 
+
+\begin{DoxyAuthor}{Autor}
+H. Reddmann 
+\end{DoxyAuthor}

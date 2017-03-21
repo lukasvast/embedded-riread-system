@@ -1,0 +1,164 @@
+\hypertarget{_graphic_8h}{}\section{Opis datoteke C\+:/\+Ri\+Read/\+Graphic.h}
+\label{_graphic_8h}\index{C\+:/\+Ri\+Read/\+Graphic.\+h@{C\+:/\+Ri\+Read/\+Graphic.\+h}}
+
+
+Header knjižnica za crtanje geometrijskih primitiva na L\+C\+D-\/u.  
+
+
+{\ttfamily \#include \char`\"{}S\+S\+D1289x16.\+h\char`\"{}}\\*
+\subsection*{Definicije}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_graphic_8h_aff527cc0d939f5b1fe4573915b27b5ca}{}\#define {\bfseries Put\+Pixel}(x,  y)~\hyperlink{_s_s_d1289x16_8h_a1e7159fb1589ae14a93d4b8e5503a571}{L\+C\+D\+\_\+\+Put\+Pixel}(x,y)\label{_graphic_8h_aff527cc0d939f5b1fe4573915b27b5ca}
+
+\item 
+\hypertarget{_graphic_8h_a699fc5286b5921b6037f1be9d2c3cf72}{}\#define {\bfseries Fill\+Rectangle}(x1,  y1,  x2,  y2)~\hyperlink{_s_s_d1289x16_8h_a69b45f8c8ad7e99e27138691149cd1f9}{L\+C\+D\+\_\+\+Bar}(x1, y1, x2, y2, Get\+Color())\label{_graphic_8h_a699fc5286b5921b6037f1be9d2c3cf72}
+
+\item 
+\hypertarget{_graphic_8h_a48e88028ef3176fab6f4ac3439c3f2f0}{}\#define {\bfseries Bevel}(x1,  y1,  x2,  y2,  r)~\hyperlink{_graphic_8h_a9584a175765628382707bdc8397c0e2b}{Round\+Rectangle}(x1,y1,x2,y2,r,0)\label{_graphic_8h_a48e88028ef3176fab6f4ac3439c3f2f0}
+
+\item 
+\hypertarget{_graphic_8h_a3012a22ab5045f42d5a50e783f363749}{}\#define {\bfseries Bevel\+Fill}(x1,  y1,  x2,  y2,  r)~\hyperlink{_graphic_8h_a9584a175765628382707bdc8397c0e2b}{Round\+Rectangle}(x1,y1,x2,y2,r,1)\label{_graphic_8h_a3012a22ab5045f42d5a50e783f363749}
+
+\end{DoxyCompactItemize}
+\subsection*{Funkcije}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_graphic_8h_a4999ab642f55d64b5e4e614ccb2752cd}{Line} (unsigned int x1, unsigned int y1, unsigned int x2, unsigned int y2)
+\begin{DoxyCompactList}\small\item\em Draw a line on a graphic L\+C\+D using Bresenham\textquotesingle{}s. \end{DoxyCompactList}\item 
+void \hyperlink{_graphic_8h_a7fe61e0d7f105ae26b8199ca361c58f1}{Rectangle} (unsigned int x1, unsigned int y1, unsigned int x2, unsigned int y2)
+\begin{DoxyCompactList}\small\item\em Draw a rectangle on a graphic L\+C\+D. \end{DoxyCompactList}\item 
+void \hyperlink{_graphic_8h_a9584a175765628382707bdc8397c0e2b}{Round\+Rectangle} (unsigned int x1, unsigned int y1, unsigned int x2, unsigned int y2, unsigned int radius, unsigned char fill)
+\begin{DoxyCompactList}\small\item\em Draws a beveled figure on the screen. \end{DoxyCompactList}\item 
+void \hyperlink{_graphic_8h_a94223e7939b705919cbf0cb9434e5fb8}{Circle} (unsigned int x, unsigned int y, unsigned int radius, unsigned char fill)
+\begin{DoxyCompactList}\small\item\em Draw a circle on the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detaljno objašnjenje}
+Header knjižnica za crtanje geometrijskih primitiva na L\+C\+D-\/u. 
+
+
+
+\subsection{Dokumentacije funkcija}
+\hypertarget{_graphic_8h_a94223e7939b705919cbf0cb9434e5fb8}{}\index{Graphic.\+h@{Graphic.\+h}!Circle@{Circle}}
+\index{Circle@{Circle}!Graphic.\+h@{Graphic.\+h}}
+\subsubsection[{Circle}]{\setlength{\rightskip}{0pt plus 5cm}void Circle (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{x, }
+\item[{unsigned int}]{y, }
+\item[{unsigned int}]{radius, }
+\item[{unsigned char}]{fill}
+\end{DoxyParamCaption}
+)}\label{_graphic_8h_a94223e7939b705919cbf0cb9434e5fb8}
+
+
+Draw a circle on the screen. 
+
+Pre\+Condition\+: None 
+\begin{DoxyParams}{Parametri}
+{\em x,y} & -\/ the center of the circle \\
+\hline
+{\em rad} & -\/ defines the redius of the circle, \\
+\hline
+{\em fill} & -\/ fill yes or no \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Povratne vrijednosti}
+none 
+\end{DoxyReturn}
+
+
+Definirano u liniji 197 datoteke Graphic.\+c.
+
+\hypertarget{_graphic_8h_a4999ab642f55d64b5e4e614ccb2752cd}{}\index{Graphic.\+h@{Graphic.\+h}!Line@{Line}}
+\index{Line@{Line}!Graphic.\+h@{Graphic.\+h}}
+\subsubsection[{Line}]{\setlength{\rightskip}{0pt plus 5cm}void Line (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{x1, }
+\item[{unsigned int}]{y1, }
+\item[{unsigned int}]{x2, }
+\item[{unsigned int}]{y2}
+\end{DoxyParamCaption}
+)}\label{_graphic_8h_a4999ab642f55d64b5e4e614ccb2752cd}
+
+
+Draw a line on a graphic L\+C\+D using Bresenham\textquotesingle{}s. 
+
+Pre\+Condition \+: Set\+Color()~\newline
+
+\begin{DoxyParams}{Parametri}
+{\em x1,y1} & -\/ starting coordinates \\
+\hline
+{\em x2,y2} & -\/ ending coordinates \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Povratne vrijednosti}
+none 
+\end{DoxyReturn}
+
+
+Definirano u liniji 30 datoteke Graphic.\+c.
+
+\hypertarget{_graphic_8h_a7fe61e0d7f105ae26b8199ca361c58f1}{}\index{Graphic.\+h@{Graphic.\+h}!Rectangle@{Rectangle}}
+\index{Rectangle@{Rectangle}!Graphic.\+h@{Graphic.\+h}}
+\subsubsection[{Rectangle}]{\setlength{\rightskip}{0pt plus 5cm}void Rectangle (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{x1, }
+\item[{unsigned int}]{y1, }
+\item[{unsigned int}]{x2, }
+\item[{unsigned int}]{y2}
+\end{DoxyParamCaption}
+)}\label{_graphic_8h_a7fe61e0d7f105ae26b8199ca361c58f1}
+
+
+Draw a rectangle on a graphic L\+C\+D. 
+
+Pre\+Condition \+: Set\+Color()~\newline
+
+\begin{DoxyParams}{Parametri}
+{\em x1,y1} & -\/ starting coordinates \\
+\hline
+{\em x2,y2} & -\/ ending coordinates \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Povratne vrijednosti}
+none 
+\end{DoxyReturn}
+
+
+Definirano u liniji 95 datoteke Graphic.\+c.
+
+\hypertarget{_graphic_8h_a9584a175765628382707bdc8397c0e2b}{}\index{Graphic.\+h@{Graphic.\+h}!Round\+Rectangle@{Round\+Rectangle}}
+\index{Round\+Rectangle@{Round\+Rectangle}!Graphic.\+h@{Graphic.\+h}}
+\subsubsection[{Round\+Rectangle}]{\setlength{\rightskip}{0pt plus 5cm}void Round\+Rectangle (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{x1, }
+\item[{unsigned int}]{y1, }
+\item[{unsigned int}]{x2, }
+\item[{unsigned int}]{y2, }
+\item[{unsigned int}]{radius, }
+\item[{unsigned char}]{fill}
+\end{DoxyParamCaption}
+)}\label{_graphic_8h_a9584a175765628382707bdc8397c0e2b}
+
+
+Draws a beveled figure on the screen. 
+
+Pre\+Condition\+: None 
+\begin{DoxyParams}{Parametri}
+{\em x1,y1} & -\/ coordinate position of the upper left center \\
+\hline
+{\em x2,y2} & -\/ coordinate position of the lower right center \\
+\hline
+{\em rad} & -\/ defines the radius of the circle \\
+\hline
+{\em fill} & -\/ fill yes or no \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Povratne vrijednosti}
+none 
+\end{DoxyReturn}
+
+
+Definirano u liniji 113 datoteke Graphic.\+c.
+

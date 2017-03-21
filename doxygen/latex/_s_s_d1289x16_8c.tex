@@ -1,0 +1,374 @@
+\hypertarget{_s_s_d1289x16_8c}{}\section{Opis datoteke C\+:/\+Ri\+Read/\+S\+S\+D1289x16.c}
+\label{_s_s_d1289x16_8c}\index{C\+:/\+Ri\+Read/\+S\+S\+D1289x16.\+c@{C\+:/\+Ri\+Read/\+S\+S\+D1289x16.\+c}}
+
+
+Knjižnica implementacija funkcija za 3.\+2" T\+F\+T L\+C\+D.  
+
+
+{\ttfamily \#include $<$avr/io.\+h$>$}\\*
+{\ttfamily \#include $<$avr/pgmspace.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}S\+S\+D1289x16.\+h\char`\"{}}\\*
+\subsection*{Funkcije}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_s_s_d1289x16_8c_a4af86aed25d6ccfbc18d7bbe1dd864be}{L\+C\+D\+\_\+\+Wait\+Ms} (unsigned int ms)
+\begin{DoxyCompactList}\small\item\em Waits (pauses) for ms milliseconds (assumes internal clock at 8\+M\+Hz) \end{DoxyCompactList}\item 
+void \hyperlink{_s_s_d1289x16_8c_a3613e02ea9ee24e2c94e85415f4ad804}{L\+C\+D\+\_\+\+Wr\+Cmd} (unsigned char cmd)
+\begin{DoxyCompactList}\small\item\em This function performs low level command write to L\+C\+D. \end{DoxyCompactList}\item 
+void \hyperlink{_s_s_d1289x16_8c_afdeae128e4ca9eae01ea1a3176ab1a1e}{L\+C\+D\+\_\+\+Wr\+Dat} (unsigned int val)
+\begin{DoxyCompactList}\small\item\em This function performs low level display data write to L\+C\+D. \end{DoxyCompactList}\item 
+void \hyperlink{_s_s_d1289x16_8c_a1b5b016b7b481be3f707c48b1c63b368}{L\+C\+D\+\_\+\+Set\+Reg} (unsigned char index, unsigned int val)
+\begin{DoxyCompactList}\small\item\em Function sets register. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{_s_s_d1289x16_8c_ae33bf14d1c0ffb132ecae30f1b520f66}{L\+C\+D\+\_\+\+Get\+Reg} (unsigned char index)
+\begin{DoxyCompactList}\small\item\em This function performs low level read data register from L\+C\+D. \end{DoxyCompactList}\item 
+\hypertarget{_s_s_d1289x16_8c_a4ec2f55080fe6531260b1a44d85d91be}{}void \hyperlink{_s_s_d1289x16_8c_a4ec2f55080fe6531260b1a44d85d91be}{L\+C\+D\+\_\+\+Init\+Port} (void)\label{_s_s_d1289x16_8c_a4ec2f55080fe6531260b1a44d85d91be}
+
+\begin{DoxyCompactList}\small\item\em This function inits L\+C\+D I\+O. \end{DoxyCompactList}\item 
+\hypertarget{_s_s_d1289x16_8c_a8415c163ade706484e9bd7e65d69a975}{}void \hyperlink{_s_s_d1289x16_8c_a8415c163ade706484e9bd7e65d69a975}{L\+C\+D\+\_\+\+Reset} (void)\label{_s_s_d1289x16_8c_a8415c163ade706484e9bd7e65d69a975}
+
+\begin{DoxyCompactList}\small\item\em This function resets L\+C\+D module. \end{DoxyCompactList}\item 
+void \hyperlink{_s_s_d1289x16_8c_ad1acded161cfdfc338c8aa8cfc55cb84}{L\+C\+D\+\_\+\+Set\+Cursor} (unsigned int x, unsigned int y)
+\begin{DoxyCompactList}\small\item\em Set start address of L\+C\+D ram. \end{DoxyCompactList}\item 
+void \hyperlink{_s_s_d1289x16_8c_ae82c2502fde8414761fed4988062bc21}{L\+C\+D\+\_\+\+Set\+Area} (unsigned int x1, unsigned int y1, unsigned int x2, unsigned int y2)
+\begin{DoxyCompactList}\small\item\em Set paint area. \end{DoxyCompactList}\item 
+void \hyperlink{_s_s_d1289x16_8c_a1e7159fb1589ae14a93d4b8e5503a571}{L\+C\+D\+\_\+\+Put\+Pixel} (unsigned int x, unsigned int y)
+\begin{DoxyCompactList}\small\item\em Puts pixel. \end{DoxyCompactList}\item 
+void \hyperlink{_s_s_d1289x16_8c_a69b45f8c8ad7e99e27138691149cd1f9}{L\+C\+D\+\_\+\+Bar} (unsigned int left, unsigned int top, unsigned int right, unsigned int bottom, unsigned int color)
+\begin{DoxyCompactList}\small\item\em Draws rectangle filled with current color. \end{DoxyCompactList}\item 
+void \hyperlink{_s_s_d1289x16_8c_a717bc21df8d87525158f373d9e25ca8a}{L\+C\+D\+\_\+\+Clear} (unsigned int color)
+\begin{DoxyCompactList}\small\item\em Fill display with color. \end{DoxyCompactList}\item 
+void \hyperlink{_s_s_d1289x16_8c_ab6b9360350119d9db001227f1ead6f67}{L\+C\+D\+\_\+\+Draw\+Symbol} (unsigned int x, unsigned int y, unsigned int w, unsigned int h, unsigned char t, const unsigned char $\ast$p\+Image)
+\begin{DoxyCompactList}\small\item\em Display image array to lcd. \end{DoxyCompactList}\item 
+void \hyperlink{_s_s_d1289x16_8c_a6c3731dbcd49b5cee77a323faedbc4d5}{L\+C\+D\+\_\+\+Draw\+Image} (unsigned int x, unsigned int y, const unsigned char $\ast$p\+Image)
+\begin{DoxyCompactList}\small\item\em Display image array to lcd. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Varijable}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_s_s_d1289x16_8c_acd8a7dfd15cf8fbc92a0e5ec8defac76}{}uint16\+\_\+t {\bfseries \+\_\+color} = W\+H\+I\+T\+E\label{_s_s_d1289x16_8c_acd8a7dfd15cf8fbc92a0e5ec8defac76}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detaljno objašnjenje}
+Knjižnica implementacija funkcija za 3.\+2" T\+F\+T L\+C\+D. 
+
+\begin{DoxyAuthor}{Autor}
+Jaruwit Supa 
+\end{DoxyAuthor}
+
+
+\subsection{Dokumentacije funkcija}
+\hypertarget{_s_s_d1289x16_8c_a69b45f8c8ad7e99e27138691149cd1f9}{}\index{S\+S\+D1289x16.\+c@{S\+S\+D1289x16.\+c}!L\+C\+D\+\_\+\+Bar@{L\+C\+D\+\_\+\+Bar}}
+\index{L\+C\+D\+\_\+\+Bar@{L\+C\+D\+\_\+\+Bar}!S\+S\+D1289x16.\+c@{S\+S\+D1289x16.\+c}}
+\subsubsection[{L\+C\+D\+\_\+\+Bar}]{\setlength{\rightskip}{0pt plus 5cm}void L\+C\+D\+\_\+\+Bar (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{left, }
+\item[{unsigned int}]{top, }
+\item[{unsigned int}]{right, }
+\item[{unsigned int}]{bottom, }
+\item[{unsigned int}]{color}
+\end{DoxyParamCaption}
+)}\label{_s_s_d1289x16_8c_a69b45f8c8ad7e99e27138691149cd1f9}
+
+
+Draws rectangle filled with current color. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em left,top} & -\/ top left corner coordinates, \\
+\hline
+{\em right,bottom} & -\/ bottom right corner coordinates \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Povratne vrijednosti}
+none
+\end{DoxyReturn}
+C\+G\+R\+A\+M map ~\newline
+ 00000...000\+E\+F line0 ~\newline
+ 00100...001\+E\+F line1 ~\newline
+ 00200...002\+E\+F line2 ~\newline
+ .... ~\newline
+ 13\+F00...13\+F\+E\+F line320 ~\newline
+ yyyxx...yyyxx ~\newline
+ address x = x ~\newline
+ address y = y $<$$<$ 8 ~\newline
+ new line y = y + 0x100 ~\newline
+
+
+Definirano u liniji 307 datoteke S\+S\+D1289x16.\+c.
+
+\hypertarget{_s_s_d1289x16_8c_a717bc21df8d87525158f373d9e25ca8a}{}\index{S\+S\+D1289x16.\+c@{S\+S\+D1289x16.\+c}!L\+C\+D\+\_\+\+Clear@{L\+C\+D\+\_\+\+Clear}}
+\index{L\+C\+D\+\_\+\+Clear@{L\+C\+D\+\_\+\+Clear}!S\+S\+D1289x16.\+c@{S\+S\+D1289x16.\+c}}
+\subsubsection[{L\+C\+D\+\_\+\+Clear}]{\setlength{\rightskip}{0pt plus 5cm}void L\+C\+D\+\_\+\+Clear (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{color}
+\end{DoxyParamCaption}
+)}\label{_s_s_d1289x16_8c_a717bc21df8d87525158f373d9e25ca8a}
+
+
+Fill display with color. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em color} & -\/ paint color \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Povratne vrijednosti}
+
+\end{DoxyReturn}
+
+
+Definirano u liniji 327 datoteke S\+S\+D1289x16.\+c.
+
+\hypertarget{_s_s_d1289x16_8c_a6c3731dbcd49b5cee77a323faedbc4d5}{}\index{S\+S\+D1289x16.\+c@{S\+S\+D1289x16.\+c}!L\+C\+D\+\_\+\+Draw\+Image@{L\+C\+D\+\_\+\+Draw\+Image}}
+\index{L\+C\+D\+\_\+\+Draw\+Image@{L\+C\+D\+\_\+\+Draw\+Image}!S\+S\+D1289x16.\+c@{S\+S\+D1289x16.\+c}}
+\subsubsection[{L\+C\+D\+\_\+\+Draw\+Image}]{\setlength{\rightskip}{0pt plus 5cm}void L\+C\+D\+\_\+\+Draw\+Image (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{x, }
+\item[{unsigned int}]{y, }
+\item[{const unsigned char $\ast$}]{p\+Image}
+\end{DoxyParamCaption}
+)}\label{_s_s_d1289x16_8c_a6c3731dbcd49b5cee77a323faedbc4d5}
+
+
+Display image array to lcd. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em x,y} & -\/ pixel coordinates \\
+\hline
+{\em p\+Image} & -\/ F\+L\+A\+S\+H array of image\\
+\hline
+\end{DoxyParams}
+Note \+: $\ast$$\ast$ modify image format here $\ast$$\ast$ ~\newline
+ image format ~\newline
+ $<$type 1 byte$>$$<$width 2 byte$>$$<$height 2 btye$>$$<$image array=\char`\"{}\char`\"{} n=\char`\"{}\char`\"{} byte$>$=\char`\"{}\char`\"{}$>$ ~\newline
+
+
+Definirano u liniji 389 datoteke S\+S\+D1289x16.\+c.
+
+\hypertarget{_s_s_d1289x16_8c_ab6b9360350119d9db001227f1ead6f67}{}\index{S\+S\+D1289x16.\+c@{S\+S\+D1289x16.\+c}!L\+C\+D\+\_\+\+Draw\+Symbol@{L\+C\+D\+\_\+\+Draw\+Symbol}}
+\index{L\+C\+D\+\_\+\+Draw\+Symbol@{L\+C\+D\+\_\+\+Draw\+Symbol}!S\+S\+D1289x16.\+c@{S\+S\+D1289x16.\+c}}
+\subsubsection[{L\+C\+D\+\_\+\+Draw\+Symbol}]{\setlength{\rightskip}{0pt plus 5cm}void L\+C\+D\+\_\+\+Draw\+Symbol (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{x, }
+\item[{unsigned int}]{y, }
+\item[{unsigned int}]{w, }
+\item[{unsigned int}]{h, }
+\item[{unsigned char}]{t, }
+\item[{const unsigned char $\ast$}]{p\+Image}
+\end{DoxyParamCaption}
+)}\label{_s_s_d1289x16_8c_ab6b9360350119d9db001227f1ead6f67}
+
+
+Display image array to lcd. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em x,y} & -\/ pixel coordinates \\
+\hline
+{\em w} & -\/ width \\
+\hline
+{\em h} & -\/ height \\
+\hline
+{\em t} & -\/ compress type(0 = none(\+R\+G\+B565), 1 = compress(\+R\+G\+B5$<$compress bit$>$55) \\
+\hline
+{\em p\+Image} & -\/ F\+L\+A\+S\+H array of image \\
+\hline
+\end{DoxyParams}
+
+
+Definirano u liniji 342 datoteke S\+S\+D1289x16.\+c.
+
+\hypertarget{_s_s_d1289x16_8c_ae33bf14d1c0ffb132ecae30f1b520f66}{}\index{S\+S\+D1289x16.\+c@{S\+S\+D1289x16.\+c}!L\+C\+D\+\_\+\+Get\+Reg@{L\+C\+D\+\_\+\+Get\+Reg}}
+\index{L\+C\+D\+\_\+\+Get\+Reg@{L\+C\+D\+\_\+\+Get\+Reg}!S\+S\+D1289x16.\+c@{S\+S\+D1289x16.\+c}}
+\subsubsection[{L\+C\+D\+\_\+\+Get\+Reg}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int L\+C\+D\+\_\+\+Get\+Reg (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{index}
+\end{DoxyParamCaption}
+)}\label{_s_s_d1289x16_8c_ae33bf14d1c0ffb132ecae30f1b520f66}
+
+
+This function performs low level read data register from L\+C\+D. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em index} & -\/ register number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Povratne vrijednosti}
+register data 
+\end{DoxyReturn}
+
+
+Definirano u liniji 92 datoteke S\+S\+D1289x16.\+c.
+
+\hypertarget{_s_s_d1289x16_8c_a1e7159fb1589ae14a93d4b8e5503a571}{}\index{S\+S\+D1289x16.\+c@{S\+S\+D1289x16.\+c}!L\+C\+D\+\_\+\+Put\+Pixel@{L\+C\+D\+\_\+\+Put\+Pixel}}
+\index{L\+C\+D\+\_\+\+Put\+Pixel@{L\+C\+D\+\_\+\+Put\+Pixel}!S\+S\+D1289x16.\+c@{S\+S\+D1289x16.\+c}}
+\subsubsection[{L\+C\+D\+\_\+\+Put\+Pixel}]{\setlength{\rightskip}{0pt plus 5cm}void L\+C\+D\+\_\+\+Put\+Pixel (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{x, }
+\item[{unsigned int}]{y}
+\end{DoxyParamCaption}
+)}\label{_s_s_d1289x16_8c_a1e7159fb1589ae14a93d4b8e5503a571}
+
+
+Puts pixel. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em x,y} & -\/ pixel coordinates \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Povratne vrijednosti}
+none 
+\end{DoxyReturn}
+
+
+Definirano u liniji 284 datoteke S\+S\+D1289x16.\+c.
+
+\hypertarget{_s_s_d1289x16_8c_ae82c2502fde8414761fed4988062bc21}{}\index{S\+S\+D1289x16.\+c@{S\+S\+D1289x16.\+c}!L\+C\+D\+\_\+\+Set\+Area@{L\+C\+D\+\_\+\+Set\+Area}}
+\index{L\+C\+D\+\_\+\+Set\+Area@{L\+C\+D\+\_\+\+Set\+Area}!S\+S\+D1289x16.\+c@{S\+S\+D1289x16.\+c}}
+\subsubsection[{L\+C\+D\+\_\+\+Set\+Area}]{\setlength{\rightskip}{0pt plus 5cm}void L\+C\+D\+\_\+\+Set\+Area (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{x1, }
+\item[{unsigned int}]{y1, }
+\item[{unsigned int}]{x2, }
+\item[{unsigned int}]{y2}
+\end{DoxyParamCaption}
+)}\label{_s_s_d1289x16_8c_ae82c2502fde8414761fed4988062bc21}
+
+
+Set paint area. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em x1,y1,x2,y2} & -\/ pixel coordinates \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Povratne vrijednosti}
+none  Side Effects\+: paint area change 
+\end{DoxyReturn}
+
+
+Definirano u liniji 265 datoteke S\+S\+D1289x16.\+c.
+
+\hypertarget{_s_s_d1289x16_8c_ad1acded161cfdfc338c8aa8cfc55cb84}{}\index{S\+S\+D1289x16.\+c@{S\+S\+D1289x16.\+c}!L\+C\+D\+\_\+\+Set\+Cursor@{L\+C\+D\+\_\+\+Set\+Cursor}}
+\index{L\+C\+D\+\_\+\+Set\+Cursor@{L\+C\+D\+\_\+\+Set\+Cursor}!S\+S\+D1289x16.\+c@{S\+S\+D1289x16.\+c}}
+\subsubsection[{L\+C\+D\+\_\+\+Set\+Cursor}]{\setlength{\rightskip}{0pt plus 5cm}void L\+C\+D\+\_\+\+Set\+Cursor (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{x, }
+\item[{unsigned int}]{y}
+\end{DoxyParamCaption}
+)}\label{_s_s_d1289x16_8c_ad1acded161cfdfc338c8aa8cfc55cb84}
+
+
+Set start address of L\+C\+D ram. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em x,y} & -\/ pixel coordinates \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Povratne vrijednosti}
+none  set start address change 
+\end{DoxyReturn}
+
+
+Definirano u liniji 247 datoteke S\+S\+D1289x16.\+c.
+
+\hypertarget{_s_s_d1289x16_8c_a1b5b016b7b481be3f707c48b1c63b368}{}\index{S\+S\+D1289x16.\+c@{S\+S\+D1289x16.\+c}!L\+C\+D\+\_\+\+Set\+Reg@{L\+C\+D\+\_\+\+Set\+Reg}}
+\index{L\+C\+D\+\_\+\+Set\+Reg@{L\+C\+D\+\_\+\+Set\+Reg}!S\+S\+D1289x16.\+c@{S\+S\+D1289x16.\+c}}
+\subsubsection[{L\+C\+D\+\_\+\+Set\+Reg}]{\setlength{\rightskip}{0pt plus 5cm}void L\+C\+D\+\_\+\+Set\+Reg (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{index, }
+\item[{unsigned int}]{val}
+\end{DoxyParamCaption}
+)}\label{_s_s_d1289x16_8c_a1b5b016b7b481be3f707c48b1c63b368}
+
+
+Function sets register. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em index} & -\/ register number \\
+\hline
+{\em val} & -\/ value to be set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Povratne vrijednosti}
+none  Hardware specific 
+\end{DoxyReturn}
+
+
+Definirano u liniji 81 datoteke S\+S\+D1289x16.\+c.
+
+\hypertarget{_s_s_d1289x16_8c_a4af86aed25d6ccfbc18d7bbe1dd864be}{}\index{S\+S\+D1289x16.\+c@{S\+S\+D1289x16.\+c}!L\+C\+D\+\_\+\+Wait\+Ms@{L\+C\+D\+\_\+\+Wait\+Ms}}
+\index{L\+C\+D\+\_\+\+Wait\+Ms@{L\+C\+D\+\_\+\+Wait\+Ms}!S\+S\+D1289x16.\+c@{S\+S\+D1289x16.\+c}}
+\subsubsection[{L\+C\+D\+\_\+\+Wait\+Ms}]{\setlength{\rightskip}{0pt plus 5cm}void L\+C\+D\+\_\+\+Wait\+Ms (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{ms}
+\end{DoxyParamCaption}
+)}\label{_s_s_d1289x16_8c_a4af86aed25d6ccfbc18d7bbe1dd864be}
+
+
+Waits (pauses) for ms milliseconds (assumes internal clock at 8\+M\+Hz) 
+
+
+\begin{DoxyParams}{Parametri}
+{\em ms} & -\/ wait milliseconds \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Povratne vrijednosti}
+none 
+\end{DoxyReturn}
+
+
+Definirano u liniji 24 datoteke S\+S\+D1289x16.\+c.
+
+\hypertarget{_s_s_d1289x16_8c_a3613e02ea9ee24e2c94e85415f4ad804}{}\index{S\+S\+D1289x16.\+c@{S\+S\+D1289x16.\+c}!L\+C\+D\+\_\+\+Wr\+Cmd@{L\+C\+D\+\_\+\+Wr\+Cmd}}
+\index{L\+C\+D\+\_\+\+Wr\+Cmd@{L\+C\+D\+\_\+\+Wr\+Cmd}!S\+S\+D1289x16.\+c@{S\+S\+D1289x16.\+c}}
+\subsubsection[{L\+C\+D\+\_\+\+Wr\+Cmd}]{\setlength{\rightskip}{0pt plus 5cm}void L\+C\+D\+\_\+\+Wr\+Cmd (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{cmd}
+\end{DoxyParamCaption}
+)}\label{_s_s_d1289x16_8c_a3613e02ea9ee24e2c94e85415f4ad804}
+
+
+This function performs low level command write to L\+C\+D. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em cmd} & -\/ command written to the L\+C\+D module \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Povratne vrijednosti}
+none  Hardware specific 
+\end{DoxyReturn}
+
+
+Definirano u liniji 43 datoteke S\+S\+D1289x16.\+c.
+
+\hypertarget{_s_s_d1289x16_8c_afdeae128e4ca9eae01ea1a3176ab1a1e}{}\index{S\+S\+D1289x16.\+c@{S\+S\+D1289x16.\+c}!L\+C\+D\+\_\+\+Wr\+Dat@{L\+C\+D\+\_\+\+Wr\+Dat}}
+\index{L\+C\+D\+\_\+\+Wr\+Dat@{L\+C\+D\+\_\+\+Wr\+Dat}!S\+S\+D1289x16.\+c@{S\+S\+D1289x16.\+c}}
+\subsubsection[{L\+C\+D\+\_\+\+Wr\+Dat}]{\setlength{\rightskip}{0pt plus 5cm}void L\+C\+D\+\_\+\+Wr\+Dat (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{val}
+\end{DoxyParamCaption}
+)}\label{_s_s_d1289x16_8c_afdeae128e4ca9eae01ea1a3176ab1a1e}
+
+
+This function performs low level display data write to L\+C\+D. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em val} & -\/ is the data written to the L\+C\+D module \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Povratne vrijednosti}
+none  Hardware specific. 
+\end{DoxyReturn}
+
+
+Definirano u liniji 62 datoteke S\+S\+D1289x16.\+c.
+

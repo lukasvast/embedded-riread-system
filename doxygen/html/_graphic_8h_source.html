@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
+<title>Izvorni kod datoteke C:/RiRead/Graphic.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="RiRead5.png"/></td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generirao Doxygen 1.8.9.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Traži');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Glavna&#160;stranica</span></a></li>
+      <li><a href="annotated.html"><span>Klase</span></a></li>
+      <li class="current"><a href="files.html"><span>Datoteke</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Traži" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Popis&#160;datoteka</span></a></li>
+      <li><a href="globals.html"><span>članovi&#160;klasa&#160;u&#160;datoteci</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_graphic_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Graphic.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_graphic_8h.html">Dokumenacija za ovu datoteku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef _GRAPHIC_H_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define _GRAPHIC_H_</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/* _____PROJECT INCLUDES_____________________________________________________ */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// LCM driver define</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_s_s_d1289x16_8h.html">SSD1289x16.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/* _____PUBLIC FUNCTIONS_____________________________________________________ */</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="_graphic_8h.html#a4999ab642f55d64b5e4e614ccb2752cd">Line</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x1, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y1, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x2, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y2);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="_graphic_8h.html#a7fe61e0d7f105ae26b8199ca361c58f1">Rectangle</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x1, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y1, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x2, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y2);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="_graphic_8h.html#a9584a175765628382707bdc8397c0e2b">RoundRectangle</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x1, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y1, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x2, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y2, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> radius, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> fill);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="_graphic_8h.html#a94223e7939b705919cbf0cb9434e5fb8">Circle</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> radius, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> fill);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">/* _____PUBLIC DEFINE________________________________________________________ */</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define PutPixel(x,y)               LCD_PutPixel(x,y)</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define FillRectangle(x1,y1,x2,y2)  LCD_Bar(x1, y1, x2, y2, GetColor())</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define Bevel(x1,y1,x2,y2,r)        RoundRectangle(x1,y1,x2,y2,r,0)</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#define BevelFill(x1,y1,x2,y2,r)    RoundRectangle(x1,y1,x2,y2,r,1)</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="_graphic_8h_html_a7fe61e0d7f105ae26b8199ca361c58f1"><div class="ttname"><a href="_graphic_8h.html#a7fe61e0d7f105ae26b8199ca361c58f1">Rectangle</a></div><div class="ttdeci">void Rectangle(unsigned int x1, unsigned int y1, unsigned int x2, unsigned int y2)</div><div class="ttdoc">Draw a rectangle on a graphic LCD. </div><div class="ttdef"><b>Definition:</b> <a href="_graphic_8c_source.html#l00095">Graphic.c:95</a></div></div>
+<div class="ttc" id="_graphic_8h_html_a4999ab642f55d64b5e4e614ccb2752cd"><div class="ttname"><a href="_graphic_8h.html#a4999ab642f55d64b5e4e614ccb2752cd">Line</a></div><div class="ttdeci">void Line(unsigned int x1, unsigned int y1, unsigned int x2, unsigned int y2)</div><div class="ttdoc">Draw a line on a graphic LCD using Bresenham&#39;s. </div><div class="ttdef"><b>Definition:</b> <a href="_graphic_8c_source.html#l00030">Graphic.c:30</a></div></div>
+<div class="ttc" id="_s_s_d1289x16_8h_html"><div class="ttname"><a href="_s_s_d1289x16_8h.html">SSD1289x16.h</a></div><div class="ttdoc">Header knjižnice funkcija, definicija kontrolnih i podatkovnih pinova za 3.2" TFT LCD...</div></div>
+<div class="ttc" id="_graphic_8h_html_a9584a175765628382707bdc8397c0e2b"><div class="ttname"><a href="_graphic_8h.html#a9584a175765628382707bdc8397c0e2b">RoundRectangle</a></div><div class="ttdeci">void RoundRectangle(unsigned int x1, unsigned int y1, unsigned int x2, unsigned int y2, unsigned int radius, unsigned char fill)</div><div class="ttdoc">Draws a beveled figure on the screen. </div><div class="ttdef"><b>Definition:</b> <a href="_graphic_8c_source.html#l00113">Graphic.c:113</a></div></div>
+<div class="ttc" id="_graphic_8h_html_a94223e7939b705919cbf0cb9434e5fb8"><div class="ttname"><a href="_graphic_8h.html#a94223e7939b705919cbf0cb9434e5fb8">Circle</a></div><div class="ttdeci">void Circle(unsigned int x, unsigned int y, unsigned int radius, unsigned char fill)</div><div class="ttdoc">Draw a circle on the screen. </div><div class="ttdef"><b>Definition:</b> <a href="_graphic_8c_source.html#l00197">Graphic.c:197</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_f67c3947e5055b089109d77c7a96c6f8.html">RiRead</a></li><li class="navelem"><a class="el" href="_graphic_8h.html">Graphic.h</a></li>
+    <li class="footer">Napravljeno Čet Svi 7 2015 17:16:11 generator: 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

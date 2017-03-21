@@ -1,0 +1,66 @@
+\hypertarget{_usart_8h}{}\section{Opis datoteke C\+:/\+Ri\+Read/\+Usart.h}
+\label{_usart_8h}\index{C\+:/\+Ri\+Read/\+Usart.\+h@{C\+:/\+Ri\+Read/\+Usart.\+h}}
+
+
+Header knjižnice funkcija za U\+S\+A\+R\+T.  
+
+
+\subsection*{Funkcije}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_usart_8h_ad4e35876cdf4a930e734bcdea170a00a}{Usart\+Init} (uint16\+\_\+t ubrr\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Inicijalizacija U\+S\+A\+R\+T-\/a (U\+S\+A\+R\+T se mora inicijalizirati prije bilo kakve komunikacije) \end{DoxyCompactList}\item 
+char \hyperlink{_usart_8h_a17cf5f64e05101259c56e90e5789654f}{U\+S\+A\+R\+T\+Read\+Char} ()
+\begin{DoxyCompactList}\small\item\em Funkcija \char`\"{}čeka podatke\char`\"{} u receive bufferu tako da provjerava R\+X\+C zastavicu, prije čitanja buffera i vraćanja povratne vrijednosti. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detaljno objašnjenje}
+Header knjižnice funkcija za U\+S\+A\+R\+T. 
+
+
+
+\subsection{Dokumentacije funkcija}
+\hypertarget{_usart_8h_ad4e35876cdf4a930e734bcdea170a00a}{}\index{Usart.\+h@{Usart.\+h}!Usart\+Init@{Usart\+Init}}
+\index{Usart\+Init@{Usart\+Init}!Usart.\+h@{Usart.\+h}}
+\subsubsection[{Usart\+Init}]{\setlength{\rightskip}{0pt plus 5cm}void Usart\+Init (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{ubrr\+Value}
+\end{DoxyParamCaption}
+)}\label{_usart_8h_ad4e35876cdf4a930e734bcdea170a00a}
+
+
+Inicijalizacija U\+S\+A\+R\+T-\/a (U\+S\+A\+R\+T se mora inicijalizirati prije bilo kakve komunikacije) 
+
+
+\begin{DoxyParams}{Parametri}
+{\em ubrr\+Value} & -\/ U\+B\+R\+R vrijednost (fosc = 8.\+000\+M\+Hz, Baud rate 9600bps --$>$ U\+B\+R\+R = 51)\\
+\hline
+\end{DoxyParams}
+U\+S\+A\+R\+T se mora inicijalizirati prije bilo kakve komunikacije. U\+C\+S\+R\+C registar\+:
+\begin{DoxyItemize}
+\item U\+R\+S\+E\+L bit postavljen u 1 određuje pristupanje U\+C\+S\+R\+C registru
+\item U\+C\+S\+Z1\+:0 bitovi postavljaju broj korištenih podatkovnih bitova (Character Size) u okvirima koje koriste receiver i transmitter
+\end{DoxyItemize}
+
+U\+C\+S\+R\+B registar\+: -\/ R\+X\+E\+N -\/ postavljanje ovog bita u jedinicu omogućava U\+S\+A\+R\+T receiver
+\begin{DoxyItemize}
+\item T\+X\+E\+N -\/ postavljanje ovog bita u jedinicu omogućava U\+S\+A\+R\+T transmitter 
+\end{DoxyItemize}
+
+Definirano u liniji 19 datoteke Usart.\+c.
+
+\hypertarget{_usart_8h_a17cf5f64e05101259c56e90e5789654f}{}\index{Usart.\+h@{Usart.\+h}!U\+S\+A\+R\+T\+Read\+Char@{U\+S\+A\+R\+T\+Read\+Char}}
+\index{U\+S\+A\+R\+T\+Read\+Char@{U\+S\+A\+R\+T\+Read\+Char}!Usart.\+h@{Usart.\+h}}
+\subsubsection[{U\+S\+A\+R\+T\+Read\+Char}]{\setlength{\rightskip}{0pt plus 5cm}char U\+S\+A\+R\+T\+Read\+Char (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_usart_8h_a17cf5f64e05101259c56e90e5789654f}
+
+
+Funkcija \char`\"{}čeka podatke\char`\"{} u receive bufferu tako da provjerava R\+X\+C zastavicu, prije čitanja buffera i vraćanja povratne vrijednosti. 
+
+Funkcija za čitanje karaktera. 
+
+Definirano u liniji 31 datoteke Usart.\+c.
+

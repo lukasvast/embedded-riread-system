@@ -1,0 +1,663 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
+<title>Opis datoteke C:/RiRead/SSD1289x16.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="RiRead5.png"/></td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generirao Doxygen 1.8.9.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Traži');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Glavna&#160;stranica</span></a></li>
+      <li><a href="annotated.html"><span>Klase</span></a></li>
+      <li class="current"><a href="files.html"><span>Datoteke</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Traži" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Popis&#160;datoteka</span></a></li>
+      <li><a href="globals.html"><span>članovi&#160;klasa&#160;u&#160;datoteci</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_s_s_d1289x16_8c.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funkcije</a> &#124;
+<a href="#var-members">Varijable</a>  </div>
+  <div class="headertitle">
+<div class="title">Opis datoteke SSD1289x16.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Knjižnica implementacija funkcija za 3.2" TFT LCD.  
+<a href="#details">Opširnije...</a></p>
+<div class="textblock"><code>#include &lt;avr/io.h&gt;</code><br />
+<code>#include &lt;avr/pgmspace.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_s_s_d1289x16_8h_source.html">SSD1289x16.h</a>&quot;</code><br />
+</div>
+<p><a href="_s_s_d1289x16_8c_source.html">Izvorni kod</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funkcije</h2></td></tr>
+<tr class="memitem:a4af86aed25d6ccfbc18d7bbe1dd864be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_s_d1289x16_8c.html#a4af86aed25d6ccfbc18d7bbe1dd864be">LCD_WaitMs</a> (unsigned int ms)</td></tr>
+<tr class="memdesc:a4af86aed25d6ccfbc18d7bbe1dd864be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits (pauses) for ms milliseconds (assumes internal clock at 8MHz)  <a href="#a4af86aed25d6ccfbc18d7bbe1dd864be">Opširnije...</a><br /></td></tr>
+<tr class="separator:a4af86aed25d6ccfbc18d7bbe1dd864be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3613e02ea9ee24e2c94e85415f4ad804"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_s_d1289x16_8c.html#a3613e02ea9ee24e2c94e85415f4ad804">LCD_WrCmd</a> (unsigned char cmd)</td></tr>
+<tr class="memdesc:a3613e02ea9ee24e2c94e85415f4ad804"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function performs low level command write to LCD.  <a href="#a3613e02ea9ee24e2c94e85415f4ad804">Opširnije...</a><br /></td></tr>
+<tr class="separator:a3613e02ea9ee24e2c94e85415f4ad804"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdeae128e4ca9eae01ea1a3176ab1a1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_s_d1289x16_8c.html#afdeae128e4ca9eae01ea1a3176ab1a1e">LCD_WrDat</a> (unsigned int val)</td></tr>
+<tr class="memdesc:afdeae128e4ca9eae01ea1a3176ab1a1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function performs low level display data write to LCD.  <a href="#afdeae128e4ca9eae01ea1a3176ab1a1e">Opširnije...</a><br /></td></tr>
+<tr class="separator:afdeae128e4ca9eae01ea1a3176ab1a1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b5b016b7b481be3f707c48b1c63b368"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_s_d1289x16_8c.html#a1b5b016b7b481be3f707c48b1c63b368">LCD_SetReg</a> (unsigned char index, unsigned int val)</td></tr>
+<tr class="memdesc:a1b5b016b7b481be3f707c48b1c63b368"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function sets register.  <a href="#a1b5b016b7b481be3f707c48b1c63b368">Opširnije...</a><br /></td></tr>
+<tr class="separator:a1b5b016b7b481be3f707c48b1c63b368"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae33bf14d1c0ffb132ecae30f1b520f66"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_s_d1289x16_8c.html#ae33bf14d1c0ffb132ecae30f1b520f66">LCD_GetReg</a> (unsigned char index)</td></tr>
+<tr class="memdesc:ae33bf14d1c0ffb132ecae30f1b520f66"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function performs low level read data register from LCD.  <a href="#ae33bf14d1c0ffb132ecae30f1b520f66">Opširnije...</a><br /></td></tr>
+<tr class="separator:ae33bf14d1c0ffb132ecae30f1b520f66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ec2f55080fe6531260b1a44d85d91be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ec2f55080fe6531260b1a44d85d91be"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_s_d1289x16_8c.html#a4ec2f55080fe6531260b1a44d85d91be">LCD_InitPort</a> (void)</td></tr>
+<tr class="memdesc:a4ec2f55080fe6531260b1a44d85d91be"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function inits LCD IO. <br /></td></tr>
+<tr class="separator:a4ec2f55080fe6531260b1a44d85d91be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8415c163ade706484e9bd7e65d69a975"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8415c163ade706484e9bd7e65d69a975"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_s_d1289x16_8c.html#a8415c163ade706484e9bd7e65d69a975">LCD_Reset</a> (void)</td></tr>
+<tr class="memdesc:a8415c163ade706484e9bd7e65d69a975"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function resets LCD module. <br /></td></tr>
+<tr class="separator:a8415c163ade706484e9bd7e65d69a975"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1acded161cfdfc338c8aa8cfc55cb84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_s_d1289x16_8c.html#ad1acded161cfdfc338c8aa8cfc55cb84">LCD_SetCursor</a> (unsigned int x, unsigned int y)</td></tr>
+<tr class="memdesc:ad1acded161cfdfc338c8aa8cfc55cb84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set start address of LCD ram.  <a href="#ad1acded161cfdfc338c8aa8cfc55cb84">Opširnije...</a><br /></td></tr>
+<tr class="separator:ad1acded161cfdfc338c8aa8cfc55cb84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae82c2502fde8414761fed4988062bc21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_s_d1289x16_8c.html#ae82c2502fde8414761fed4988062bc21">LCD_SetArea</a> (unsigned int x1, unsigned int y1, unsigned int x2, unsigned int y2)</td></tr>
+<tr class="memdesc:ae82c2502fde8414761fed4988062bc21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set paint area.  <a href="#ae82c2502fde8414761fed4988062bc21">Opširnije...</a><br /></td></tr>
+<tr class="separator:ae82c2502fde8414761fed4988062bc21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e7159fb1589ae14a93d4b8e5503a571"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_s_d1289x16_8c.html#a1e7159fb1589ae14a93d4b8e5503a571">LCD_PutPixel</a> (unsigned int x, unsigned int y)</td></tr>
+<tr class="memdesc:a1e7159fb1589ae14a93d4b8e5503a571"><td class="mdescLeft">&#160;</td><td class="mdescRight">Puts pixel.  <a href="#a1e7159fb1589ae14a93d4b8e5503a571">Opširnije...</a><br /></td></tr>
+<tr class="separator:a1e7159fb1589ae14a93d4b8e5503a571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69b45f8c8ad7e99e27138691149cd1f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_s_d1289x16_8c.html#a69b45f8c8ad7e99e27138691149cd1f9">LCD_Bar</a> (unsigned int left, unsigned int top, unsigned int right, unsigned int bottom, unsigned int color)</td></tr>
+<tr class="memdesc:a69b45f8c8ad7e99e27138691149cd1f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws rectangle filled with current color.  <a href="#a69b45f8c8ad7e99e27138691149cd1f9">Opširnije...</a><br /></td></tr>
+<tr class="separator:a69b45f8c8ad7e99e27138691149cd1f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a717bc21df8d87525158f373d9e25ca8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_s_d1289x16_8c.html#a717bc21df8d87525158f373d9e25ca8a">LCD_Clear</a> (unsigned int color)</td></tr>
+<tr class="memdesc:a717bc21df8d87525158f373d9e25ca8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill display with color.  <a href="#a717bc21df8d87525158f373d9e25ca8a">Opširnije...</a><br /></td></tr>
+<tr class="separator:a717bc21df8d87525158f373d9e25ca8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6b9360350119d9db001227f1ead6f67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_s_d1289x16_8c.html#ab6b9360350119d9db001227f1ead6f67">LCD_DrawSymbol</a> (unsigned int x, unsigned int y, unsigned int w, unsigned int h, unsigned char t, const unsigned char *pImage)</td></tr>
+<tr class="memdesc:ab6b9360350119d9db001227f1ead6f67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display image array to lcd.  <a href="#ab6b9360350119d9db001227f1ead6f67">Opširnije...</a><br /></td></tr>
+<tr class="separator:ab6b9360350119d9db001227f1ead6f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c3731dbcd49b5cee77a323faedbc4d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_s_d1289x16_8c.html#a6c3731dbcd49b5cee77a323faedbc4d5">LCD_DrawImage</a> (unsigned int x, unsigned int y, const unsigned char *pImage)</td></tr>
+<tr class="memdesc:a6c3731dbcd49b5cee77a323faedbc4d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display image array to lcd.  <a href="#a6c3731dbcd49b5cee77a323faedbc4d5">Opširnije...</a><br /></td></tr>
+<tr class="separator:a6c3731dbcd49b5cee77a323faedbc4d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Varijable</h2></td></tr>
+<tr class="memitem:acd8a7dfd15cf8fbc92a0e5ec8defac76"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd8a7dfd15cf8fbc92a0e5ec8defac76"></a>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>_color</b> = WHITE</td></tr>
+<tr class="separator:acd8a7dfd15cf8fbc92a0e5ec8defac76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detaljno objašnjenje</h2>
+<div class="textblock"><p>Knjižnica implementacija funkcija za 3.2" TFT LCD. </p>
+<dl class="section author"><dt>Autor</dt><dd>Jaruwit Supa </dd></dl>
+
+<p>Definirano u datoteci <a class="el" href="_s_s_d1289x16_8c_source.html">SSD1289x16.c</a>.</p>
+</div><h2 class="groupheader">Dokumentacije funkcija</h2>
+<a class="anchor" id="a69b45f8c8ad7e99e27138691149cd1f9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_Bar </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>top</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>right</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>bottom</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draws rectangle filled with current color. </p>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">left,top</td><td>- top left corner coordinates, </td></tr>
+    <tr><td class="paramname">right,bottom</td><td>- bottom right corner coordinates </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>none</dd></dl>
+<p>CGRAM map <br />
+ 00000...000EF line0 <br />
+ 00100...001EF line1 <br />
+ 00200...002EF line2 <br />
+ .... <br />
+ 13F00...13FEF line320 <br />
+ yyyxx...yyyxx <br />
+ address x = x <br />
+ address y = y &lt;&lt; 8 <br />
+ new line y = y + 0x100 <br />
+</p>
+
+<p>Definirano u liniji <a class="el" href="_s_s_d1289x16_8c_source.html#l00307">307</a> datoteke <a class="el" href="_s_s_d1289x16_8c_source.html">SSD1289x16.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a717bc21df8d87525158f373d9e25ca8a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_Clear </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fill display with color. </p>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>- paint color </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd></dd></dl>
+
+<p>Definirano u liniji <a class="el" href="_s_s_d1289x16_8c_source.html#l00327">327</a> datoteke <a class="el" href="_s_s_d1289x16_8c_source.html">SSD1289x16.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6c3731dbcd49b5cee77a323faedbc4d5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_DrawImage </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned char *&#160;</td>
+          <td class="paramname"><em>pImage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Display image array to lcd. </p>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x,y</td><td>- pixel coordinates </td></tr>
+    <tr><td class="paramname">pImage</td><td>- FLASH array of image</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Note : ** modify image format here ** <br />
+ image format <br />
+ &lt;type 1 byte&gt;&lt;width 2 byte&gt;&lt;height 2 btye&gt;&lt;image array="" n="" byte&gt;=""&gt; <br />
+</p>
+
+<p>Definirano u liniji <a class="el" href="_s_s_d1289x16_8c_source.html#l00389">389</a> datoteke <a class="el" href="_s_s_d1289x16_8c_source.html">SSD1289x16.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab6b9360350119d9db001227f1ead6f67"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_DrawSymbol </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned char *&#160;</td>
+          <td class="paramname"><em>pImage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Display image array to lcd. </p>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x,y</td><td>- pixel coordinates </td></tr>
+    <tr><td class="paramname">w</td><td>- width </td></tr>
+    <tr><td class="paramname">h</td><td>- height </td></tr>
+    <tr><td class="paramname">t</td><td>- compress type(0 = none(RGB565), 1 = compress(RGB5&lt;compress bit&gt;55) </td></tr>
+    <tr><td class="paramname">pImage</td><td>- FLASH array of image </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definirano u liniji <a class="el" href="_s_s_d1289x16_8c_source.html#l00342">342</a> datoteke <a class="el" href="_s_s_d1289x16_8c_source.html">SSD1289x16.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae33bf14d1c0ffb132ecae30f1b520f66"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int LCD_GetReg </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function performs low level read data register from LCD. </p>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>- register number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>register data </dd></dl>
+
+<p>Definirano u liniji <a class="el" href="_s_s_d1289x16_8c_source.html#l00092">92</a> datoteke <a class="el" href="_s_s_d1289x16_8c_source.html">SSD1289x16.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1e7159fb1589ae14a93d4b8e5503a571"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_PutPixel </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Puts pixel. </p>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x,y</td><td>- pixel coordinates </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>none </dd></dl>
+
+<p>Definirano u liniji <a class="el" href="_s_s_d1289x16_8c_source.html#l00284">284</a> datoteke <a class="el" href="_s_s_d1289x16_8c_source.html">SSD1289x16.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae82c2502fde8414761fed4988062bc21"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_SetArea </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>y2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set paint area. </p>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x1,y1,x2,y2</td><td>- pixel coordinates </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>none  Side Effects: paint area change </dd></dl>
+
+<p>Definirano u liniji <a class="el" href="_s_s_d1289x16_8c_source.html#l00265">265</a> datoteke <a class="el" href="_s_s_d1289x16_8c_source.html">SSD1289x16.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad1acded161cfdfc338c8aa8cfc55cb84"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_SetCursor </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set start address of LCD ram. </p>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x,y</td><td>- pixel coordinates </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>none  set start address change </dd></dl>
+
+<p>Definirano u liniji <a class="el" href="_s_s_d1289x16_8c_source.html#l00247">247</a> datoteke <a class="el" href="_s_s_d1289x16_8c_source.html">SSD1289x16.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1b5b016b7b481be3f707c48b1c63b368"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_SetReg </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function sets register. </p>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>- register number </td></tr>
+    <tr><td class="paramname">val</td><td>- value to be set </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>none  Hardware specific </dd></dl>
+
+<p>Definirano u liniji <a class="el" href="_s_s_d1289x16_8c_source.html#l00081">81</a> datoteke <a class="el" href="_s_s_d1289x16_8c_source.html">SSD1289x16.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4af86aed25d6ccfbc18d7bbe1dd864be"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_WaitMs </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>ms</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Waits (pauses) for ms milliseconds (assumes internal clock at 8MHz) </p>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ms</td><td>- wait milliseconds </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>none </dd></dl>
+
+<p>Definirano u liniji <a class="el" href="_s_s_d1289x16_8c_source.html#l00024">24</a> datoteke <a class="el" href="_s_s_d1289x16_8c_source.html">SSD1289x16.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3613e02ea9ee24e2c94e85415f4ad804"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_WrCmd </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>cmd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function performs low level command write to LCD. </p>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd</td><td>- command written to the LCD module </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>none  Hardware specific </dd></dl>
+
+<p>Definirano u liniji <a class="el" href="_s_s_d1289x16_8c_source.html#l00043">43</a> datoteke <a class="el" href="_s_s_d1289x16_8c_source.html">SSD1289x16.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afdeae128e4ca9eae01ea1a3176ab1a1e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_WrDat </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function performs low level display data write to LCD. </p>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">val</td><td>- is the data written to the LCD module </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>none  Hardware specific. </dd></dl>
+
+<p>Definirano u liniji <a class="el" href="_s_s_d1289x16_8c_source.html#l00062">62</a> datoteke <a class="el" href="_s_s_d1289x16_8c_source.html">SSD1289x16.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_f67c3947e5055b089109d77c7a96c6f8.html">RiRead</a></li><li class="navelem"><a class="el" href="_s_s_d1289x16_8c.html">SSD1289x16.c</a></li>
+    <li class="footer">Napravljeno Čet Svi 7 2015 17:16:12 generator: 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

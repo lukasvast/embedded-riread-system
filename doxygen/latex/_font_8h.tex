@@ -1,0 +1,153 @@
+\hypertarget{_font_8h}{}\section{Opis datoteke C\+:/\+Ri\+Read/\+Font.h}
+\label{_font_8h}\index{C\+:/\+Ri\+Read/\+Font.\+h@{C\+:/\+Ri\+Read/\+Font.\+h}}
+
+
+Header knjižnice funkcija za ispis teksta na L\+C\+D.  
+
+
+\subsection*{Definicije}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_font_8h_a013857b0cfa308ff06c920bed3ac3268}{}\#define {\bfseries A\+L\+I\+N\+E\+\_\+\+L\+E\+F\+T}~0\label{_font_8h_a013857b0cfa308ff06c920bed3ac3268}
+
+\item 
+\hypertarget{_font_8h_a3c679771776cd77293f2ee8ad992eeaf}{}\#define {\bfseries A\+L\+I\+N\+E\+\_\+\+C\+E\+N\+T\+E\+R}~1\label{_font_8h_a3c679771776cd77293f2ee8ad992eeaf}
+
+\item 
+\hypertarget{_font_8h_af395b2b1ffe32ddb615d34bdae4692a6}{}\#define {\bfseries A\+L\+I\+N\+E\+\_\+\+R\+I\+G\+H\+T}~2\label{_font_8h_af395b2b1ffe32ddb615d34bdae4692a6}
+
+\item 
+\hypertarget{_font_8h_af2984900459f2a8478a208c9fa916e95}{}\#define {\bfseries Get\+Cursor\+X}()~\hyperlink{_font_8h_a31b3e0f195ebe68aeeaab5a2805b362a}{cursor\+X}\label{_font_8h_af2984900459f2a8478a208c9fa916e95}
+
+\item 
+\hypertarget{_font_8h_a288c82ea7ac5df48fe5c4c75de8062fe}{}\#define {\bfseries Get\+Cursor\+Y}()~\hyperlink{_font_8h_afeb0001391a3ce8a4043f3a6dfc4fb5e}{cursor\+Y}\label{_font_8h_a288c82ea7ac5df48fe5c4c75de8062fe}
+
+\item 
+\hypertarget{_font_8h_a2a721fb5260d320bc3a66a5faa11268b}{}\#define {\bfseries Set\+Cursor\+X}(x)~\hyperlink{_font_8h_a31b3e0f195ebe68aeeaab5a2805b362a}{cursor\+X} = x\label{_font_8h_a2a721fb5260d320bc3a66a5faa11268b}
+
+\item 
+\hypertarget{_font_8h_aa2bc9e00b6c73e047343efd184f064d1}{}\#define {\bfseries Set\+Cursor\+Y}(y)~\hyperlink{_font_8h_afeb0001391a3ce8a4043f3a6dfc4fb5e}{cursor\+Y} = y\label{_font_8h_aa2bc9e00b6c73e047343efd184f064d1}
+
+\item 
+\hypertarget{_font_8h_a11564a0c0ae8e34bf16da5fc2155d608}{}\#define {\bfseries Set\+Cursor}(x,  y)~\{\hyperlink{_font_8h_a31b3e0f195ebe68aeeaab5a2805b362a}{cursor\+X} = x; \hyperlink{_font_8h_afeb0001391a3ce8a4043f3a6dfc4fb5e}{cursor\+Y} = y;\}\label{_font_8h_a11564a0c0ae8e34bf16da5fc2155d608}
+
+\item 
+\hypertarget{_font_8h_a0b487edc697664a2222f5ce6dd001c6c}{}\#define {\bfseries Lcd\+Rot}(n)~\hyperlink{_font_8h_ad60cbe58e4e297fd42c0891c4fc2d290}{rot} = n\label{_font_8h_a0b487edc697664a2222f5ce6dd001c6c}
+
+\item 
+\hypertarget{_font_8h_a8b675b7d72a1dd43811340823a3966af}{}\#define {\bfseries Lcd\+Font\+Fixed}(n)~\hyperlink{_font_8h_a6dd56539d1ca92245b880fb10f414887}{Font\+Fixed} = n\label{_font_8h_a8b675b7d72a1dd43811340823a3966af}
+
+\item 
+\hypertarget{_font_8h_aa97840147170c14aa3f4553f1a6fc869}{}\#define {\bfseries Lcd\+Non\+Transparence}(n)~Non\+Transparenz = n\label{_font_8h_aa97840147170c14aa3f4553f1a6fc869}
+
+\item 
+\hypertarget{_font_8h_a5e705e0454f90b6ae171b3b5c32996fa}{}\#define {\bfseries Set\+Fg\+Color}(n)~\hyperlink{_font_8h_a195f0db2fa98af670b120f35349b2086}{Fg\+Color} = n\label{_font_8h_a5e705e0454f90b6ae171b3b5c32996fa}
+
+\item 
+\hypertarget{_font_8h_ab5a31dfe04a40a3d7b49de6e9f5dbe26}{}\#define {\bfseries Set\+Bk\+Color}(n)~\hyperlink{_font_8h_a1d6424906df5072a8b98f6f9d816d075}{Bk\+Color} = n\label{_font_8h_ab5a31dfe04a40a3d7b49de6e9f5dbe26}
+
+\item 
+\hypertarget{_font_8h_ab1295200dc2aa61da5cfa9dc71773b28}{}\#define {\bfseries Get\+Fg\+Color}()~\hyperlink{_font_8h_a195f0db2fa98af670b120f35349b2086}{Fg\+Color}\label{_font_8h_ab1295200dc2aa61da5cfa9dc71773b28}
+
+\item 
+\hypertarget{_font_8h_ab3269b8497d3bec51e1b67647e343077}{}\#define {\bfseries Get\+Bk\+Color}()~\hyperlink{_font_8h_a1d6424906df5072a8b98f6f9d816d075}{Bk\+Color}\label{_font_8h_ab3269b8497d3bec51e1b67647e343077}
+
+\item 
+\hypertarget{_font_8h_aeb0da9d0c7574c8cffbdf4323930e271}{}\#define {\bfseries Lcd\+Font\+X\+Scale}(n)~\hyperlink{_font_8h_a191ad500e2c744ff7f535fa7e5edc8ff}{Font\+X\+Scale} = n\label{_font_8h_aeb0da9d0c7574c8cffbdf4323930e271}
+
+\item 
+\hypertarget{_font_8h_a8758b20e1d8f60c3cdbe7fd7b7ac9cde}{}\#define {\bfseries Lcd\+Font\+Y\+Scale}(n)~\hyperlink{_font_8h_a014c9d60e5be295c9a3aef6253eed2a0}{Font\+Y\+Scale} = n\label{_font_8h_a8758b20e1d8f60c3cdbe7fd7b7ac9cde}
+
+\item 
+\hypertarget{_font_8h_ace5ef80ac7cee6ab6f8cb03fbfbac7a9}{}\#define {\bfseries Lcd\+Font\+Space}(n)~\hyperlink{_font_8h_af2cbfe329b4ba66cd2686939b21cb0df}{Font\+Space}  = n\label{_font_8h_ace5ef80ac7cee6ab6f8cb03fbfbac7a9}
+
+\item 
+\hypertarget{_font_8h_a4a7ba8d60f3c19b4b9c40974408dc63b}{}\#define {\bfseries Lcd\+Font\+Width}(n)~\hyperlink{_font_8h_a021249d2eb1fb7335050c2e883335f5b}{Font\+Width} = n\label{_font_8h_a4a7ba8d60f3c19b4b9c40974408dc63b}
+
+\item 
+\hypertarget{_font_8h_aa1d095912376f83112adbef53bc2b03f}{}\#define {\bfseries Lcd\+Font\+Height}(n)~\hyperlink{_font_8h_a62f376116f9d475e50cf9f8c73b7d5c4}{Font\+Height} = n\label{_font_8h_aa1d095912376f83112adbef53bc2b03f}
+
+\end{DoxyCompactItemize}
+\subsection*{Funkcije}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_font_8h_aa80237c6f19aaeca9b1c1c0c9781fbfa}{}void {\bfseries Lcd\+Font} (uint8\+\_\+t $\ast$pointer)\label{_font_8h_aa80237c6f19aaeca9b1c1c0c9781fbfa}
+
+\item 
+\hypertarget{_font_8h_ad5f521ad3ea5a61ea2d741bb4d5abb29}{}void {\bfseries Lcd\+Rot} (uint8\+\_\+t r)\label{_font_8h_ad5f521ad3ea5a61ea2d741bb4d5abb29}
+
+\item 
+\hypertarget{_font_8h_adeb8ae328bc298d0a7aaffb49c609447}{}void {\bfseries Lcd\+Font\+Fixed} (uint8\+\_\+t typ)\label{_font_8h_adeb8ae328bc298d0a7aaffb49c609447}
+
+\item 
+\hypertarget{_font_8h_a695fa410d9b0912a8df0b2383a71f939}{}void {\bfseries Lcd\+Non\+Transparence} (uint8\+\_\+t nt)\label{_font_8h_a695fa410d9b0912a8df0b2383a71f939}
+
+\item 
+\hypertarget{_font_8h_a4d6420394d14001a2dea6454698f47d7}{}void {\bfseries Lcd\+Fg\+Color} (uint16\+\_\+t color)\label{_font_8h_a4d6420394d14001a2dea6454698f47d7}
+
+\item 
+\hypertarget{_font_8h_ae70a635e387612643c99f4fc9e16acc6}{}void {\bfseries Lcd\+Bk\+Color} (uint16\+\_\+t color)\label{_font_8h_ae70a635e387612643c99f4fc9e16acc6}
+
+\item 
+\hypertarget{_font_8h_ad42677c472344ed2d3b57688a5c0a444}{}uint8\+\_\+t {\bfseries Draw\+Char} (uint8\+\_\+t c)\label{_font_8h_ad42677c472344ed2d3b57688a5c0a444}
+
+\item 
+\hypertarget{_font_8h_a61dc643cdd2a1e0a5f8dc9fcf6f72ee1}{}unsigned int {\bfseries Draw\+Str} (char $\ast$c)\label{_font_8h_a61dc643cdd2a1e0a5f8dc9fcf6f72ee1}
+
+\item 
+\hypertarget{_font_8h_abfcc1ee7d5c12775f4e4fde03158a62b}{}unsigned int {\bfseries Calc\+Text\+Width} (char $\ast$Text)\label{_font_8h_abfcc1ee7d5c12775f4e4fde03158a62b}
+
+\item 
+\hypertarget{_font_8h_a15309fa52fbdc936dabe70a3858818bb}{}unsigned int {\bfseries Calc\+Text\+Height} (char $\ast$Text)\label{_font_8h_a15309fa52fbdc936dabe70a3858818bb}
+
+\item 
+\hypertarget{_font_8h_a81c1f29eb5be83b4d7acc27eff070d45}{}void {\bfseries Draw\+Text} (uint16\+\_\+t left, uint16\+\_\+t top, uint16\+\_\+t right, uint16\+\_\+t bottom, char $\ast$Text, uint8\+\_\+t aline)\label{_font_8h_a81c1f29eb5be83b4d7acc27eff070d45}
+
+\end{DoxyCompactItemize}
+\subsection*{Varijable}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_font_8h_ad60cbe58e4e297fd42c0891c4fc2d290}{}uint8\+\_\+t \hyperlink{_font_8h_ad60cbe58e4e297fd42c0891c4fc2d290}{rot}\label{_font_8h_ad60cbe58e4e297fd42c0891c4fc2d290}
+
+\begin{DoxyCompactList}\small\item\em Rot 0=0 degrees, 1=90 degrees. \end{DoxyCompactList}\item 
+\hypertarget{_font_8h_a195f0db2fa98af670b120f35349b2086}{}uint16\+\_\+t \hyperlink{_font_8h_a195f0db2fa98af670b120f35349b2086}{Fg\+Color}\label{_font_8h_a195f0db2fa98af670b120f35349b2086}
+
+\begin{DoxyCompactList}\small\item\em Text F\+G color, 5-\/6-\/5 R\+G\+B. \end{DoxyCompactList}\item 
+\hypertarget{_font_8h_a1d6424906df5072a8b98f6f9d816d075}{}uint16\+\_\+t \hyperlink{_font_8h_a1d6424906df5072a8b98f6f9d816d075}{Bk\+Color}\label{_font_8h_a1d6424906df5072a8b98f6f9d816d075}
+
+\begin{DoxyCompactList}\small\item\em Text B\+K color, 5-\/6-\/5 R\+G\+B. \end{DoxyCompactList}\item 
+\hypertarget{_font_8h_a6dd56539d1ca92245b880fb10f414887}{}uint8\+\_\+t \hyperlink{_font_8h_a6dd56539d1ca92245b880fb10f414887}{Font\+Fixed}\label{_font_8h_a6dd56539d1ca92245b880fb10f414887}
+
+\begin{DoxyCompactList}\small\item\em Text type 0=Proportional , 1=Fixed. \end{DoxyCompactList}\item 
+\hypertarget{_font_8h_abc7c4d8e80ef62cd26b71c61eba5782b}{}uint8\+\_\+t \hyperlink{_font_8h_abc7c4d8e80ef62cd26b71c61eba5782b}{Non\+Transparence}\label{_font_8h_abc7c4d8e80ef62cd26b71c61eba5782b}
+
+\begin{DoxyCompactList}\small\item\em Transparent 0=No, 1=Yes. \end{DoxyCompactList}\item 
+\hypertarget{_font_8h_a021249d2eb1fb7335050c2e883335f5b}{}uint8\+\_\+t \hyperlink{_font_8h_a021249d2eb1fb7335050c2e883335f5b}{Font\+Width}\label{_font_8h_a021249d2eb1fb7335050c2e883335f5b}
+
+\begin{DoxyCompactList}\small\item\em M\+A\+X width of font. \end{DoxyCompactList}\item 
+\hypertarget{_font_8h_a62f376116f9d475e50cf9f8c73b7d5c4}{}uint8\+\_\+t \hyperlink{_font_8h_a62f376116f9d475e50cf9f8c73b7d5c4}{Font\+Height}\label{_font_8h_a62f376116f9d475e50cf9f8c73b7d5c4}
+
+\begin{DoxyCompactList}\small\item\em M\+A\+X height of font. \end{DoxyCompactList}\item 
+\hypertarget{_font_8h_a191ad500e2c744ff7f535fa7e5edc8ff}{}uint8\+\_\+t \hyperlink{_font_8h_a191ad500e2c744ff7f535fa7e5edc8ff}{Font\+X\+Scale}\label{_font_8h_a191ad500e2c744ff7f535fa7e5edc8ff}
+
+\begin{DoxyCompactList}\small\item\em X size of font. \end{DoxyCompactList}\item 
+\hypertarget{_font_8h_a014c9d60e5be295c9a3aef6253eed2a0}{}uint8\+\_\+t \hyperlink{_font_8h_a014c9d60e5be295c9a3aef6253eed2a0}{Font\+Y\+Scale}\label{_font_8h_a014c9d60e5be295c9a3aef6253eed2a0}
+
+\begin{DoxyCompactList}\small\item\em Y size of font. \end{DoxyCompactList}\item 
+\hypertarget{_font_8h_af2cbfe329b4ba66cd2686939b21cb0df}{}uint8\+\_\+t \hyperlink{_font_8h_af2cbfe329b4ba66cd2686939b21cb0df}{Font\+Space}\label{_font_8h_af2cbfe329b4ba66cd2686939b21cb0df}
+
+\begin{DoxyCompactList}\small\item\em Space between char. \end{DoxyCompactList}\item 
+\hypertarget{_font_8h_a31b3e0f195ebe68aeeaab5a2805b362a}{}unsigned int \hyperlink{_font_8h_a31b3e0f195ebe68aeeaab5a2805b362a}{cursor\+X}\label{_font_8h_a31b3e0f195ebe68aeeaab5a2805b362a}
+
+\begin{DoxyCompactList}\small\item\em X position. \end{DoxyCompactList}\item 
+\hypertarget{_font_8h_afeb0001391a3ce8a4043f3a6dfc4fb5e}{}unsigned int \hyperlink{_font_8h_afeb0001391a3ce8a4043f3a6dfc4fb5e}{cursor\+Y}\label{_font_8h_afeb0001391a3ce8a4043f3a6dfc4fb5e}
+
+\begin{DoxyCompactList}\small\item\em Y position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detaljno objašnjenje}
+Header knjižnice funkcija za ispis teksta na L\+C\+D. 
+
+\begin{DoxyAuthor}{Autor}
+H. Reddmann 
+\end{DoxyAuthor}
